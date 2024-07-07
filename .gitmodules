@@ -103,3 +103,6 @@
 [submodule "Mods/D6-Jokers"]
 	path = Mods/D6-Jokers
 	url = https://github.com/GauntletGames-2086/D6-Jokers
+[submodule "Mods/Steamodded"]
+	path = Mods/Steamodded
+	url = https://github.com/Steamopollys/Steamodded
