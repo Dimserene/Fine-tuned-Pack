@@ -40,3 +40,66 @@
 [submodule "Mods/Trance"]
 	path = Mods/Trance
 	url = https://github.com/Dimserene/Trance
+[submodule "Mods/Bird-Jokers"]
+	path = Mods/Bird-Jokers
+	url = https://github.com/JustinBanzon/Bird-Jokers
+[submodule "Mods/BossJokers"]
+	path = Mods/BossJokers
+	url = https://github.com/KilledByLava/BossJokers
+[submodule "Mods/Codex-Arcanum"]
+	path = Mods/Codex-Arcanum
+	url = https://github.com/Dimserene/Codex-Arcanum
+[submodule "Mods/Crimsons-Ultimate-Card-Collection"]
+	path = Mods/Crimsons-Ultimate-Card-Collection
+	url = https://github.com/XenoCHeart/Crimsons-Ultimate-Card-Collection
+[submodule "Mods/DX-Tarots"]
+	path = Mods/DX-Tarots
+	url = https://github.com/Dimserene/DX-Tarots
+[submodule "Mods/gamblecore"]
+	path = Mods/gamblecore
+	url = https://github.com/nicholassam6425/gamblecore
+[submodule "Mods/JankJonklers"]
+	path = Mods/JankJonklers
+	url = https://github.com/spikeof2010/JankJonklers
+[submodule "Mods/Jimbo-s-Pack"]
+	path = Mods/Jimbo-s-Pack
+	url = https://github.com/art-muncher/Jimbo-s-Pack
+[submodule "Mods/Joker-Evolution"]
+	path = Mods/Joker-Evolution
+	url = https://github.com/Dimserene/Joker-Evolution
+[submodule "Mods/MathBlinds"]
+	path = Mods/MathBlinds
+	url = https://github.com/Bazinga9000/MathBlinds
+[submodule "Mods/MikasBalatro"]
+	path = Mods/MikasBalatro
+	url = https://github.com/Dimserene/MikasBalatro
+[submodule "Mods/MystBlinds"]
+	path = Mods/MystBlinds
+	url = https://github.com/Mysthaps/MystBlinds
+[submodule "Mods/blank-jokers"]
+	path = Mods/blank-jokers
+	url = https://github.com/Dimserene/blank-jokers
+[submodule "Mods/Ortalab-DEMO"]
+	path = Mods/Ortalab-DEMO
+	url = https://github.com/Dimserene/Ortalab-DEMO
+[submodule "Mods/balatro-pampa-joker-pack"]
+	path = Mods/balatro-pampa-joker-pack
+	url = https://github.com/batabata3/balatro-pampa-joker-pack
+[submodule "Mods/SDM0-s-Stuff"]
+	path = Mods/SDM0-s-Stuff
+	url = https://github.com/Dimserene/SDM0-s-Stuff
+[submodule "Mods/The-World-Ends-With-Jimbo"]
+	path = Mods/The-World-Ends-With-Jimbo
+	url = https://github.com/parchmentEngineer/The-World-Ends-With-Jimbo
+[submodule "Mods/Betmma_mods"]
+	path = Mods/Betmma_mods
+	url = https://github.com/Dimserene/Betmma_mods
+[submodule "Mods/BonusBlinds"]
+	path = Mods/BonusBlinds
+	url = https://github.com/Mathguy23/BonusBlinds
+[submodule "Mods/Bunco"]
+	path = Mods/Bunco
+	url = https://github.com/Firch/Bunco
+[submodule "Mods/D6-Jokers"]
+	path = Mods/D6-Jokers
+	url = https://github.com/GauntletGames-2086/D6-Jokers
