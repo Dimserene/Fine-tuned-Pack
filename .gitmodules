@@ -103,3 +103,6 @@
 [submodule "Mods/Ortalab-DEMO"]
 	path = Mods/Ortalab-DEMO
 	url = https://github.com/Dimserene/Ortalab-DEMO
+[submodule "Mods/BalatroFoldButton"]
+	path = Mods/BalatroFoldButton
+	url = https://github.com/happinyz/BalatroFoldButton
