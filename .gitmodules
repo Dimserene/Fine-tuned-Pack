@@ -76,9 +76,6 @@
 [submodule "Mods/blank-jokers"]
 	path = Mods/blank-jokers
 	url = https://github.com/Dimserene/blank-jokers
-[submodule "Mods/Ortalab-DEMO"]
-	path = Mods/Ortalab-DEMO
-	url = https://github.com/Dimserene/Ortalab-DEMO
 [submodule "Mods/balatro-pampa-joker-pack"]
 	path = Mods/balatro-pampa-joker-pack
 	url = https://github.com/batabata3/balatro-pampa-joker-pack
@@ -103,3 +100,6 @@
 [submodule "Mods/Steamodded"]
 	path = Mods/Steamodded
 	url = https://github.com/Steamopollys/Steamodded
+[submodule "Mods/Ortalab-DEMO"]
+	path = Mods/Ortalab-DEMO
+	url = https://github.com/Dimserene/Ortalab-DEMO
