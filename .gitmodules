@@ -46,9 +46,6 @@
 [submodule "Mods/BossJokers"]
 	path = Mods/BossJokers
 	url = https://github.com/KilledByLava/BossJokers
-[submodule "Mods/Codex-Arcanum"]
-	path = Mods/Codex-Arcanum
-	url = https://github.com/Dimserene/Codex-Arcanum
 [submodule "Mods/Crimsons-Ultimate-Card-Collection"]
 	path = Mods/Crimsons-Ultimate-Card-Collection
 	url = https://github.com/XenoCHeart/Crimsons-Ultimate-Card-Collection
