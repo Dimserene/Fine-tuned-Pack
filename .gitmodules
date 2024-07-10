@@ -22,9 +22,6 @@
 [submodule "Mods/JokerSellValue"]
 	path = Mods/JokerSellValue
 	url = https://github.com/OppositeWolf770/JokerSellValue
-[submodule "Mods/NeowBlessings"]
-	path = Mods/NeowBlessings
-	url = https://github.com/kjossul/NeowBlessings
 [submodule "Mods/Nopeus"]
 	path = Mods/Nopeus
 	url = https://github.com/cubeanimataz/Nopeus
