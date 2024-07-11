@@ -70,9 +70,6 @@
 [submodule "Mods/The-World-Ends-With-Jimbo"]
 	path = Mods/The-World-Ends-With-Jimbo
 	url = https://github.com/parchmentEngineer/The-World-Ends-With-Jimbo
-[submodule "Mods/Betmma_mods"]
-	path = Mods/Betmma_mods
-	url = https://github.com/Dimserene/Betmma_mods
 [submodule "Mods/BonusBlinds"]
 	path = Mods/BonusBlinds
 	url = https://github.com/Mathguy23/BonusBlinds
@@ -97,3 +94,6 @@
 [submodule "Mods/Brainstorm"]
 	path = Mods/Brainstorm
 	url = https://github.com/Dimserene/Brainstorm
+[submodule "Mods/Betmma_mods"]
+	path = Mods/Betmma_mods
+	url = git@github.com:Dimserene/Betmma_mods.git
