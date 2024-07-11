@@ -7,9 +7,6 @@
 [submodule "Mods/BetterStakes"]
 	path = Mods/BetterStakes
 	url = https://github.com/Dimserene/BetterStakes
-[submodule "Mods/Brainstorm"]
-	path = Mods/Brainstorm
-	url = https://github.com/OceanRamen/Brainstorm
 [submodule "Mods/Balatro-DeckCreator"]
 	path = Mods/Balatro-DeckCreator
 	url = https://github.com/adambennett/Balatro-DeckCreator
@@ -103,3 +100,6 @@
 [submodule "Mods/Loop"]
 	path = Mods/Loop
 	url = https://github.com/jenwalter666/Loop
+[submodule "Mods/Brainstorm"]
+	path = Mods/Brainstorm
+	url = https://github.com/Dimserene/Brainstorm
