@@ -43,9 +43,6 @@
 [submodule "Mods/DX-Tarots"]
 	path = Mods/DX-Tarots
 	url = https://github.com/Dimserene/DX-Tarots
-[submodule "Mods/gamblecore"]
-	path = Mods/gamblecore
-	url = https://github.com/nicholassam6425/gamblecore
 [submodule "Mods/JankJonklers"]
 	path = Mods/JankJonklers
 	url = https://github.com/spikeof2010/JankJonklers
