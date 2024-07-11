@@ -40,9 +40,6 @@
 [submodule "Mods/BossJokers"]
 	path = Mods/BossJokers
 	url = https://github.com/KilledByLava/BossJokers
-[submodule "Mods/Crimsons-Ultimate-Card-Collection"]
-	path = Mods/Crimsons-Ultimate-Card-Collection
-	url = https://github.com/XenoCHeart/Crimsons-Ultimate-Card-Collection
 [submodule "Mods/DX-Tarots"]
 	path = Mods/DX-Tarots
 	url = https://github.com/Dimserene/DX-Tarots
