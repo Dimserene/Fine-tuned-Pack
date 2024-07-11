@@ -1,0 +1,1 @@
+return {["timerDuringRunID"]=1,["selectedCategory"]="Single Run",["timerEndScreen"]=true,["selectedCategoryID"]=1,["timerColor"]="White",["includeMenuing"]=true,["selectedColorID"]=1,["timerDuringRun"]="Disabled",["replaySpeedID"]=2,}
