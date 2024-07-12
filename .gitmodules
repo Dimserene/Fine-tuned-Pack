@@ -97,3 +97,6 @@
 [submodule "Mods/Betmma_mods"]
 	path = Mods/Betmma_mods
 	url = git@github.com:Dimserene/Betmma_mods.git
+[submodule "Mods/kcvanilla"]
+	path = Mods/kcvanilla
+	url = https://github.com/kcgidw/kcvanilla
