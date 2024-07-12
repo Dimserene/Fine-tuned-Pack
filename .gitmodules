@@ -40,9 +40,6 @@
 [submodule "Mods/BossJokers"]
 	path = Mods/BossJokers
 	url = https://github.com/KilledByLava/BossJokers
-[submodule "Mods/DX-Tarots"]
-	path = Mods/DX-Tarots
-	url = https://github.com/Dimserene/DX-Tarots
 [submodule "Mods/JankJonklers"]
 	path = Mods/JankJonklers
 	url = https://github.com/spikeof2010/JankJonklers
@@ -100,3 +97,6 @@
 [submodule "Mods/Betmma_mods"]
 	path = Mods/Betmma_mods
 	url = https://github.com/Dimserene/Betmma_mods
+[submodule "Mods/DX-Tarots"]
+	path = Mods/DX-Tarots
+	url = https://github.com/Dimserene/DX-Tarots
