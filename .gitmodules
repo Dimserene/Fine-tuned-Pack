@@ -97,3 +97,6 @@
 [submodule "Mods/Bunco"]
 	path = Mods/Bunco
 	url = https://github.com/Firch/Bunco
+[submodule "Mods/Betmma_mods"]
+	path = Mods/Betmma_mods
+	url = https://github.com/Dimserene/Betmma_mods
