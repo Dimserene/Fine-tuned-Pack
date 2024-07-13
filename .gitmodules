@@ -70,9 +70,6 @@
 [submodule "Mods/BonusBlinds"]
 	path = Mods/BonusBlinds
 	url = https://github.com/Mathguy23/BonusBlinds
-[submodule "Mods/Bunco"]
-	path = Mods/Bunco
-	url = https://github.com/Firch/Bunco
 [submodule "Mods/D6-Jokers"]
 	path = Mods/D6-Jokers
 	url = https://github.com/GauntletGames-2086/D6-Jokers
@@ -94,9 +91,6 @@
 [submodule "Mods/kcvanilla"]
 	path = Mods/kcvanilla
 	url = https://github.com/kcgidw/kcvanilla
-[submodule "Mods/Betmma_mods"]
-	path = Mods/Betmma_mods
-	url = https://github.com/Dimserene/Betmma_mods
 [submodule "Mods/DX-Tarots"]
 	path = Mods/DX-Tarots
 	url = https://github.com/Dimserene/DX-Tarots
