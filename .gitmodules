@@ -88,9 +88,6 @@
 [submodule "Mods/Brainstorm"]
 	path = Mods/Brainstorm
 	url = https://github.com/Dimserene/Brainstorm
-[submodule "Mods/kcvanilla"]
-	path = Mods/kcvanilla
-	url = https://github.com/kcgidw/kcvanilla
 [submodule "Mods/DX-Tarots"]
 	path = Mods/DX-Tarots
 	url = https://github.com/Dimserene/DX-Tarots
