@@ -3,6 +3,7 @@
 --- MOD_ID: EscapeExitButton
 --- MOD_AUTHOR: [Steamo]
 --- MOD_DESCRIPTION: Add an "Exit" button into the "Escape" menu
+--- PRIORITY: 100000000
 
 ----------------------------------------------
 ------------MOD CODE -------------------------
