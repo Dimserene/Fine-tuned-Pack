@@ -1,3 +1,4 @@
+![Alttext](https://github.com/Dimserene/Fine-tuned-Pack/blob/main/Real_Fine_Tuned_Logo.png)
 Contains every mods in [Vanilla Plus Pack](https://github.com/Dimserene/Vanilla-Plus-Pack)
 
 Main modpack: [Dimserene's Modpack](https://github.com/Dimserene/Dimserenes-Modpack)
