@@ -91,9 +91,6 @@
 [submodule "Mods/Brainstorm"]
 	path = Mods/Brainstorm
 	url = https://github.com/OceanRamen/Brainstorm
-[submodule "Mods/BonusBlinds"]
-	path = Mods/BonusBlinds
-	url = https://github.com/Dimserene/BonusBlinds
 [submodule "Mods/Betmma_mods"]
 	path = Mods/Betmma_mods
 	url = https://github.com/Dimserene/Betmma_mods
