@@ -76,9 +76,6 @@
 [submodule "Mods/BalatroFoldButton"]
 	path = Mods/BalatroFoldButton
 	url = https://github.com/happinyz/BalatroFoldButton
-[submodule "Mods/Ortalab-DEMO"]
-	path = Mods/Ortalab-DEMO
-	url = https://github.com/Dimserene/Ortalab-DEMO
 [submodule "Mods/Loop"]
 	path = Mods/Loop
 	url = https://github.com/jenwalter666/Loop
@@ -94,3 +91,7 @@
 [submodule "Mods/Betmma_mods"]
 	path = Mods/Betmma_mods
 	url = https://github.com/Dimserene/Betmma_mods
+[submodule "Mods/Ortalab-DEMO"]
+	path = Mods/Ortalab-DEMO
+	url = https://github.com/GauntletGames-2086/Ortalab-DEMO
+	branch = test
