@@ -50,8 +50,8 @@ end
 updateCursors()
 
 
-SMODS.registerUIElement("JCursor", {
-    {
+SMODS.current_mod.custom_ui = function(modNodes)
+    table.insert(modNodes, {
         n = G.UIT.R,
         config = {
             padding = 0.2,
@@ -80,8 +80,9 @@ SMODS.registerUIElement("JCursor", {
                 }
             }),
         }
-    }
-})
+    })
+end
+
 
 function G.FUNCS.openModDirectory(arg_736_0)
     url = "file://" .. love.filesystem.getSaveDirectory() .. MOD_DIRECTORY
