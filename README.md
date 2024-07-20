@@ -19,20 +19,29 @@ Mod List: [Google Sheet](https://docs.google.com/spreadsheets/d/1L2wPG5mNI-ZBSW_
 
 ## How to Install
 
+  (Windows) Download the __SetupFineTuned.bat__ and put it wherever you want, and run it. The mods will be automatically downloaded and put into correct directory.
+
+  Or
+
   Run following scripts in command prompt:
 
   ```
-  git clone --recurse-submodules --remote-submodules https://github.com/Dimserene/Fine-tuned-Pack/
+  git clone --recurse-submodules --remote-submodules https://github.com/Dimserene/Fine-tuned-Pack
   ```
 
   And then copy all the contents in Mods folder to your Mods folder.
 
 ## How to Update Modpack
 
+  (Windows) Run __UpdateFineTuned.bat__ which should be in the downloaded Fine-tuned-Pack folder.
+
+  Or
+
   Run following scripts in command prompt:
 
   ```
 git remote set-url origin https://github.com/Dimserene/Fine-tuned-Pack
+git pull
 git submodule update --remote --recursive --merge
   ```
 
