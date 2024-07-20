@@ -33,7 +33,7 @@ Mod List: [Google Sheet](https://docs.google.com/spreadsheets/d/1L2wPG5mNI-ZBSW_
 
 ## How to Update Modpack
 
-  (Windows) Run __UpdateFineTuned.bat__ which should be in the downloaded Fine-tuned-Pack folder.
+  (Windows) Run __UpdateFineTuned.bat__ which should be in the downloaded __Fine-tuned-Pack__ folder.
 
   Or
 
