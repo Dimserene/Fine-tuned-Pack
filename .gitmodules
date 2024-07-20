@@ -58,9 +58,6 @@
 [submodule "Mods/balatro-pampa-joker-pack"]
 	path = Mods/balatro-pampa-joker-pack
 	url = https://github.com/batabata3/balatro-pampa-joker-pack
-[submodule "Mods/SDM0-s-Stuff"]
-	path = Mods/SDM0-s-Stuff
-	url = https://github.com/Dimserene/SDM0-s-Stuff
 [submodule "Mods/The-World-Ends-With-Jimbo"]
 	path = Mods/The-World-Ends-With-Jimbo
 	url = https://github.com/parchmentEngineer/The-World-Ends-With-Jimbo
