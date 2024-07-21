@@ -83,9 +83,6 @@
 [submodule "Mods/BonusBlinds"]
 	path = Mods/BonusBlinds
 	url = https://github.com/Dimserene/BonusBlinds
-[submodule "Mods/CardSleeves"]
-	path = Mods/CardSleeves
-	url = https://github.com/Dimserene/CardSleeves
 [submodule "Mods/SDM0-s-Stuff"]
 	path = Mods/SDM0-s-Stuff
 	url = https://github.com/Dimserene/SDM0-s-Stuff
