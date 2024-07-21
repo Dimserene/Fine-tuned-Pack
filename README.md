@@ -25,6 +25,11 @@ If you wanna join us dealing with this nightmare beast, you can join our [Discor
 
     [Download](https://github.com/ethangreen-dev/lovely-injector/releases) [Discord](https://discord.com/channels/1116389027176787968/1214591552903716954) [Authors](https://github.com/ethangreen-dev/lovely-injector/graphs/contributors?from=2024-03-03&to=2024-06-26&type=c)
 
+---
+
+> __⚠️You don't need to install Steamodded yourself! The modpack will install and update Steamodded for you!__ 
+
+---
 
 ## How to Install
 
