@@ -70,9 +70,6 @@
 [submodule "Mods/Loop"]
 	path = Mods/Loop
 	url = https://github.com/jenwalter666/Loop
-[submodule "Mods/DX-Tarots"]
-	path = Mods/DX-Tarots
-	url = https://github.com/Dimserene/DX-Tarots
 [submodule "Mods/Bunco"]
 	path = Mods/Bunco
 	url = https://github.com/Firch/Bunco
