@@ -4,9 +4,6 @@
 [submodule "Mods/balatro-safety-steamodded"]
 	path = Mods/balatro-safety-steamodded
 	url = https://github.com/Zei33/balatro-safety-steamodded
-[submodule "Mods/Balatro-DeckCreator"]
-	path = Mods/Balatro-DeckCreator
-	url = https://github.com/adambennett/Balatro-DeckCreator
 [submodule "Mods/cartomancer"]
 	path = Mods/cartomancer
 	url = https://github.com/stupxd/cartomancer
