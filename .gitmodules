@@ -49,9 +49,6 @@
 [submodule "Mods/MystBlinds"]
 	path = Mods/MystBlinds
 	url = https://github.com/Mysthaps/MystBlinds
-[submodule "Mods/blank-jokers"]
-	path = Mods/blank-jokers
-	url = https://github.com/Dimserene/blank-jokers
 [submodule "Mods/balatro-pampa-joker-pack"]
 	path = Mods/balatro-pampa-joker-pack
 	url = https://github.com/batabata3/balatro-pampa-joker-pack
