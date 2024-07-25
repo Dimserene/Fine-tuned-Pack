@@ -89,3 +89,6 @@
 [submodule "Mods/JokerDisplayModSupport"]
 	path = Mods/JokerDisplayModSupport
 	url = https://github.com/nh6574/JokerDisplayModSupport/
+[submodule "Mods/kcvanilla"]
+	path = Mods/kcvanilla
+	url = https://github.com/kcgidw/kcvanilla
