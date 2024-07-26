@@ -92,3 +92,6 @@
 [submodule "Mods/Brainstorm"]
 	path = Mods/Brainstorm
 	url = https://github.com/Dimserene/Brainstorm
+[submodule "Mods/DebugPlus"]
+	path = Mods/DebugPlus
+	url = https://github.com/Dimserene/DebugPlus
