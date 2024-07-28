@@ -8,6 +8,7 @@
 ----------------------------------------------
 ------------MOD CODE -------------------------
 
+local lovely = require("lovely")
 local nativefs = require("nativefs")
 
 if SMODS.Atlas then
