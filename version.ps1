@@ -1,0 +1,1 @@
+Get-Date -AsUTC -UFormat "%Y/%m/%d %H:%M:%S" > .\Mods\ModpackUtil\version.txt
