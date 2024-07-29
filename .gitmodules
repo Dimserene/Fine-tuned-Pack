@@ -1,12 +1,6 @@
 [submodule "Mods/Aura"]
 	path = Mods/Aura
 	url = https://github.com/MathIsFun0/Aura
-[submodule "Mods/balatro-safety-steamodded"]
-	path = Mods/balatro-safety-steamodded
-	url = https://github.com/Zei33/balatro-safety-steamodded
-[submodule "Mods/cartomancer"]
-	path = Mods/cartomancer
-	url = https://github.com/stupxd/cartomancer
 [submodule "Mods/JokerDisplay"]
 	path = Mods/JokerDisplay
 	url = https://github.com/nh6574/JokerDisplay
@@ -16,12 +10,6 @@
 [submodule "Mods/Nopeus"]
 	path = Mods/Nopeus
 	url = https://github.com/cubeanimataz/Nopeus
-[submodule "Mods/balatro-NotJustYet"]
-	path = Mods/balatro-NotJustYet
-	url = https://github.com/Toneblock/balatro-NotJustYet
-[submodule "Mods/Balatro-Stickers-Always-Shown"]
-	path = Mods/Balatro-Stickers-Always-Shown
-	url = https://github.com/Dimserene/Balatro-Stickers-Always-Shown
 [submodule "Mods/Taikomochi"]
 	path = Mods/Taikomochi
 	url = https://github.com/Amvoled/Taikomochi
@@ -49,9 +37,6 @@
 [submodule "Mods/MystBlinds"]
 	path = Mods/MystBlinds
 	url = https://github.com/Mysthaps/MystBlinds
-[submodule "Mods/balatro-pampa-joker-pack"]
-	path = Mods/balatro-pampa-joker-pack
-	url = https://github.com/batabata3/balatro-pampa-joker-pack
 [submodule "Mods/The-World-Ends-With-Jimbo"]
 	path = Mods/The-World-Ends-With-Jimbo
 	url = https://github.com/parchmentEngineer/The-World-Ends-With-Jimbo
@@ -61,18 +46,12 @@
 [submodule "Mods/Steamodded"]
 	path = Mods/Steamodded
 	url = https://github.com/Steamopollys/Steamodded
-[submodule "Mods/BalatroFoldButton"]
-	path = Mods/BalatroFoldButton
-	url = https://github.com/happinyz/BalatroFoldButton
 [submodule "Mods/Loop"]
 	path = Mods/Loop
 	url = https://github.com/jenwalter666/Loop
 [submodule "Mods/Bunco"]
 	path = Mods/Bunco
 	url = https://github.com/Firch/Bunco
-[submodule "Mods/Betmma_mods"]
-	path = Mods/Betmma_mods
-	url = https://github.com/Dimserene/Betmma_mods
 [submodule "Mods/Ortalab-DEMO"]
 	path = Mods/Ortalab-DEMO
 	url = https://github.com/GauntletGames-2086/Ortalab-DEMO
@@ -83,9 +62,6 @@
 [submodule "Mods/JokerDisplayModSupport"]
 	path = Mods/JokerDisplayModSupport
 	url = https://github.com/nh6574/JokerDisplayModSupport/
-[submodule "Mods/kcvanilla"]
-	path = Mods/kcvanilla
-	url = https://github.com/kcgidw/kcvanilla
 [submodule "Mods/Brainstorm"]
 	path = Mods/Brainstorm
 	url = https://github.com/Dimserene/Brainstorm
@@ -96,3 +72,27 @@
 	path = Mods/SDM0-s-Stuff
 	url = https://github.com/Dimserene/SDM0-s-Stuff
 	branch = smods_1.0.0
+[submodule "Mods/Stickers-Always-Shown"]
+	path = Mods/Stickers-Always-Shown
+	url = https://github.com/Dimserene/Stickers-Always-Shown
+[submodule "Mods/Betmma_mods"]
+	path = Mods/Betmma_mods
+	url = https://github.com/betmma/my_balatro_mods
+[submodule "Mods/FoldButton"]
+	path = Mods/FoldButton
+	url = https://github.com/happinyz/BalatroFoldButton
+[submodule "Mods/NotJustYet"]
+	path = Mods/NotJustYet
+	url = https://github.com/Toneblock/balatro-NotJustYet
+[submodule "Mods/PampaJockerPack"]
+	path = Mods/PampaJockerPack
+	url = https://github.com/batabata3/balatro-pampa-joker-pack
+[submodule "Mods/BalatroSafety"]
+	path = Mods/BalatroSafety
+	url = https://github.com/Zei33/balatro-safety-steamodded
+[submodule "Mods/Cartomancer"]
+	path = Mods/Cartomancer
+	url = https://github.com/stupxd/Cartomancer
+[submodule "Mods/KCVanilla"]
+	path = Mods/KCVanilla
+	url = https://github.com/kcgidw/kcvanilla
