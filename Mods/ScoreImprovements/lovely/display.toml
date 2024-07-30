@@ -1,0 +1,39 @@
+[manifest]
+version = "1.0.0"
+dump_lua = true
+priority = 0
+
+[[patches]]
+[patches.pattern]
+target = "functions/misc_functions.lua"
+pattern = "if num >= G.E_SWITCH_POINT then"
+position = "at"
+payload = '''
+local sign = (num >= 0 and 1) or -1
+if math.abs(num) == math.huge then
+    return (sign < 0 and "-" or "") .. "inf"
+end
+if math.abs(num) >= G.E_SWITCH_POINT then
+num = math.abs(num)
+'''
+match_indent = true
+overwrite = false
+
+[[patches]]
+[patches.pattern]
+target = "functions/misc_functions.lua"
+pattern = '''return string.format("%.3f",x/(10^fac))..'e'..fac'''
+position = "at"
+payload = '''
+return (sign < 0 and "-" or "") .. string.format("%.3f",x/(10^fac))..'e'..fac
+'''
+match_indent = true
+overwrite = false
+
+[[patches]]
+[patches.regex]
+target = "functions/button_callbacks.lua"
+pattern = "0,(math\\.floor\\(.+?\\)\\))"
+position = "at"
+line_prepend = ""
+payload = "0, math.min($1, 30)"
