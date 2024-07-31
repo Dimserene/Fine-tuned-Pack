@@ -96,3 +96,27 @@
 [submodule "Mods/KCVanilla"]
 	path = Mods/KCVanilla
 	url = https://github.com/kcgidw/kcvanilla
+[submodule "Mods/Contracts"]
+	path = Mods/Contracts
+	url = https://github.com/Mathguy23/Contracts
+[submodule "Mods/Jeantoine"]
+	path = Mods/Jeantoine
+	url = https://github.com/Kaishi130/Jeantoine
+[submodule "Mods/MoreJokerPacks"]
+	path = Mods/MoreJokerPacks
+	url = https://github.com/Samario1/MoreJokerPacks
+[submodule "Mods/Virtues"]
+	path = Mods/Virtues
+	url = https://github.com/someone23832/Virtues
+[submodule "Mods/SpicyJokers"]
+	path = Mods/SpicyJokers
+	url = https://github.com/RitchieDimaria/SpicyJokers
+[submodule "Mods/VanillaExpansion"]
+	path = Mods/VanillaExpansion
+	url = https://github.com/nekojoe/VanillaExpansion
+[submodule "Mods/Aurinko"]
+	path = Mods/Aurinko
+	url = https://github.com/jenwalter666/Aurinko
+[submodule "Mods/StackedRedSeals"]
+	path = Mods/StackedRedSeals
+	url = https://github.com/cerloCasa/StackedRedSeals
