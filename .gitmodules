@@ -96,7 +96,6 @@
 [submodule "Mods/KCVanilla"]
 	path = Mods/KCVanilla
 	url = https://github.com/kcgidw/kcvanilla
-<<<<<<< HEAD
 [submodule "Mods/Contracts"]
 	path = Mods/Contracts
 	url = https://github.com/Mathguy23/Contracts
@@ -121,7 +120,6 @@
 [submodule "Mods/StackedRedSeals"]
 	path = Mods/StackedRedSeals
 	url = https://github.com/cerloCasa/StackedRedSeals
-=======
 [submodule "Mods/Aure-Spectral"]
 	path = Mods/Aure-Spectral
 	url = https://github.com/SDM0/Aure-Spectral
@@ -131,4 +129,3 @@
 [submodule "Mods/DVD"]
 	path = Mods/DVD
 	url = https://github.com/stupxd/dvd
->>>>>>> e221a9634d09f4e4a4ad168750d97d74d86c78aa
