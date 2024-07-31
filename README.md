@@ -33,11 +33,9 @@ If you wanna join us dealing with this nightmare beast, you can join our [Discor
 
 ## How to Install
 
-  (Windows) Download the __SetupFineTuned.bat__ and put it wherever you want, and run it. The mods will be automatically downloaded and put into correct directory.
+  Download __SetupFineTuned.bat__(Windows) or __SetupFineTuned.sh__(Linux), put it wherever you want, and run it. The mods will be automatically downloaded and put into correct directory.
 
-  Or
-
-  Run following scripts in command prompt:
+  Or run following scripts in command prompt:
 
   ```
   git clone --recurse-submodules --remote-submodules https://github.com/Dimserene/Fine-tuned-Pack
@@ -47,11 +45,9 @@ If you wanna join us dealing with this nightmare beast, you can join our [Discor
 
 ## How to Update Modpack
 
-  (Windows) Run __UpdateFineTuned.bat__ which should be in the downloaded __Fine-tuned-Pack__ folder.
+  Run __UpdateFineTuned.bat__(Windows) or __UpdateFineTuned.sh__(Linux) which should be in the downloaded __Fine-tuned-Pack__ folder.
 
-  Or
-
-  Run following scripts in command prompt:
+  Or run following scripts in command prompt:
 
   ```
 git remote set-url origin https://github.com/Dimserene/Fine-tuned-Pack
