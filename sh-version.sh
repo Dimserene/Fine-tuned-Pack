@@ -1,3 +1,4 @@
+nano ./CurrentVersion.txt
 cp ./CurrentVersion.txt ./Mods/ModpackUtil/
 date -u "+%Y/%m/%d %H:%M:%S" > Mods/ModpackUtil/VersionTime.txt
 git pull
