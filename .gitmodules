@@ -96,9 +96,6 @@
 [submodule "Mods/KCVanilla"]
 	path = Mods/KCVanilla
 	url = https://github.com/kcgidw/kcvanilla
-[submodule "Mods/Contracts"]
-	path = Mods/Contracts
-	url = https://github.com/Mathguy23/Contracts
 [submodule "Mods/Jeantoine"]
 	path = Mods/Jeantoine
 	url = https://github.com/Kaishi130/Jeantoine
