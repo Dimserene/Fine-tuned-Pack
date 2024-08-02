@@ -68,10 +68,6 @@
 [submodule "Mods/DebugPlus"]
 	path = Mods/DebugPlus
 	url = https://github.com/Dimserene/DebugPlus
-[submodule "Mods/SDM0-s-Stuff"]
-	path = Mods/SDM0-s-Stuff
-	url = https://github.com/Dimserene/SDM0-s-Stuff
-	branch = smods_1.0.0
 [submodule "Mods/Stickers-Always-Shown"]
 	path = Mods/Stickers-Always-Shown
 	url = https://github.com/Dimserene/Stickers-Always-Shown
@@ -126,3 +122,6 @@
 [submodule "Mods/DVD"]
 	path = Mods/DVD
 	url = https://github.com/stupxd/dvd
+[submodule "Mods/SDM_0-s-Stuff"]
+	path = Mods/SDM_0-s-Stuff
+	url = https://github.com/SDM0/SDM_0-s-Stuff
