@@ -80,9 +80,6 @@
 [submodule "Mods/NotJustYet"]
 	path = Mods/NotJustYet
 	url = https://github.com/Toneblock/balatro-NotJustYet
-[submodule "Mods/PampaJockerPack"]
-	path = Mods/PampaJockerPack
-	url = https://github.com/batabata3/balatro-pampa-joker-pack
 [submodule "Mods/BalatroSafety"]
 	path = Mods/BalatroSafety
 	url = https://github.com/Zei33/balatro-safety-steamodded
@@ -125,3 +122,6 @@
 [submodule "Mods/SDM_0-s-Stuff"]
 	path = Mods/SDM_0-s-Stuff
 	url = https://github.com/SDM0/SDM_0-s-Stuff
+[submodule "Mods/PampaJokerPack"]
+	path = Mods/PampaJokerPack
+	url = https://github.com/Dimserene/PampaJokerPack
