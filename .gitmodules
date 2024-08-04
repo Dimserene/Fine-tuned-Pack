@@ -28,9 +28,6 @@
 [submodule "Mods/Jimbo-s-Pack"]
 	path = Mods/Jimbo-s-Pack
 	url = https://github.com/art-muncher/Jimbo-s-Pack
-[submodule "Mods/Joker-Evolution"]
-	path = Mods/Joker-Evolution
-	url = https://github.com/Dimserene/Joker-Evolution
 [submodule "Mods/MathBlinds"]
 	path = Mods/MathBlinds
 	url = https://github.com/Bazinga9000/MathBlinds
@@ -125,3 +122,6 @@
 [submodule "Mods/PampaJokerPack"]
 	path = Mods/PampaJokerPack
 	url = https://github.com/Dimserene/PampaJokerPack
+[submodule "Mods/Joker-Evolution"]
+	path = Mods/Joker-Evolution
+	url = https://github.com/SDM0/Joker-Evolution
