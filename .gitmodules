@@ -110,12 +110,6 @@
 [submodule "Mods/Aure-Spectral"]
 	path = Mods/Aure-Spectral
 	url = https://github.com/SDM0/Aure-Spectral
-[submodule "Mods/BlackjackHands"]
-	path = Mods/BlackjackHands
-	url = https://github.com/Mathguy23/BlackjackHands
-[submodule "Mods/DVD"]
-	path = Mods/DVD
-	url = https://github.com/stupxd/dvd
 [submodule "Mods/SDM_0-s-Stuff"]
 	path = Mods/SDM_0-s-Stuff
 	url = https://github.com/SDM0/SDM_0-s-Stuff
