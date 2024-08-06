@@ -38,8 +38,8 @@ If you wanna join us dealing with this nightmare beast, you can join our [Discor
   Or run following scripts in command prompt:
 
   ```
-  git clone --recurse-submodules --remote-submodules https://github.com/Dimserene/Dimserenes-Modpack
-xcopy "Dimserenes-Modpack\Mods" "%appdata%\Balatro\Mods" /w /e /h /i
+  git clone --recurse-submodules --remote-submodules https://github.com/Dimserene/Fine-tuned-Pack
+xcopy "Fine-tuned-Pack\Mods" "%appdata%\Balatro\Mods" /w /e /h /i
   ```
 
 ## How to Update Modpack
