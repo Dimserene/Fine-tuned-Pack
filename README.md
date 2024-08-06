@@ -38,10 +38,9 @@ If you wanna join us dealing with this nightmare beast, you can join our [Discor
   Or run following scripts in command prompt:
 
   ```
-  git clone --recurse-submodules --remote-submodules https://github.com/Dimserene/Fine-tuned-Pack
+  git clone --recurse-submodules --remote-submodules https://github.com/Dimserene/Dimserenes-Modpack
+xcopy "Dimserenes-Modpack\Mods" "%appdata%\Balatro\Mods" /w /e /h /i
   ```
-
-  And then copy all the contents in Mods folder to your Mods folder.
 
 ## How to Update Modpack
 
@@ -55,7 +54,7 @@ git pull
 git submodule update --remote --recursive --merge
   ```
 
-  And then, again, copy all the contents in Mods folder to your Mods folder.
+  And then, copy all the contents in Mods folder to your Mods folder.
 
 ## FAQ
 
