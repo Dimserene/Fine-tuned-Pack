@@ -37,9 +37,6 @@
 [submodule "Mods/The-World-Ends-With-Jimbo"]
 	path = Mods/The-World-Ends-With-Jimbo
 	url = https://github.com/parchmentEngineer/The-World-Ends-With-Jimbo
-[submodule "Mods/D6-Jokers"]
-	path = Mods/D6-Jokers
-	url = https://github.com/GauntletGames-2086/D6-Jokers
 [submodule "Mods/Steamodded"]
 	path = Mods/Steamodded
 	url = https://github.com/Steamopollys/Steamodded
@@ -101,9 +98,6 @@
 [submodule "Mods/VanillaExpansion"]
 	path = Mods/VanillaExpansion
 	url = https://github.com/nekojoe/VanillaExpansion
-[submodule "Mods/Aurinko"]
-	path = Mods/Aurinko
-	url = https://github.com/jenwalter666/Aurinko
 [submodule "Mods/StackedRedSeals"]
 	path = Mods/StackedRedSeals
 	url = https://github.com/cerloCasa/StackedRedSeals
