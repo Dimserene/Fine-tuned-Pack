@@ -43,9 +43,6 @@
 [submodule "Mods/Loop"]
 	path = Mods/Loop
 	url = https://github.com/jenwalter666/Loop
-[submodule "Mods/Bunco"]
-	path = Mods/Bunco
-	url = https://github.com/Firch/Bunco
 [submodule "Mods/Ortalab-DEMO"]
 	path = Mods/Ortalab-DEMO
 	url = https://github.com/GauntletGames-2086/Ortalab-DEMO
