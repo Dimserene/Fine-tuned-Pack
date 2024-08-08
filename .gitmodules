@@ -7,9 +7,6 @@
 [submodule "Mods/JokerSellValue"]
 	path = Mods/JokerSellValue
 	url = https://github.com/OppositeWolf770/JokerSellValue
-[submodule "Mods/Nopeus"]
-	path = Mods/Nopeus
-	url = https://github.com/cubeanimataz/Nopeus
 [submodule "Mods/Taikomochi"]
 	path = Mods/Taikomochi
 	url = https://github.com/Amvoled/Taikomochi
@@ -40,9 +37,6 @@
 [submodule "Mods/Steamodded"]
 	path = Mods/Steamodded
 	url = https://github.com/Steamopollys/Steamodded
-[submodule "Mods/Loop"]
-	path = Mods/Loop
-	url = https://github.com/jenwalter666/Loop
 [submodule "Mods/Ortalab-DEMO"]
 	path = Mods/Ortalab-DEMO
 	url = https://github.com/GauntletGames-2086/Ortalab-DEMO
