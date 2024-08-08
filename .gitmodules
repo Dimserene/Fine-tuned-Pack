@@ -13,9 +13,6 @@
 [submodule "Mods/Trance"]
 	path = Mods/Trance
 	url = https://github.com/Dimserene/Trance
-[submodule "Mods/Bird-Jokers"]
-	path = Mods/Bird-Jokers
-	url = https://github.com/JustinBanzon/Bird-Jokers
 [submodule "Mods/BossJokers"]
 	path = Mods/BossJokers
 	url = https://github.com/KilledByLava/BossJokers
@@ -104,3 +101,6 @@
 [submodule "Mods/Joker-Evolution"]
 	path = Mods/Joker-Evolution
 	url = https://github.com/SDM0/Joker-Evolution
+[submodule "Mods/Bunco"]
+	path = Mods/Bunco
+	url = https://github.com/Firch/Bunco
