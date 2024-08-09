@@ -104,3 +104,9 @@
 [submodule "Mods/Bunco"]
 	path = Mods/Bunco
 	url = https://github.com/Firch/Bunco
+[submodule "Mods/Bird-Jokers"]
+	path = Mods/Bird-Jokers
+	url = https://github.com/JustinBanzon/Bird-Jokers
+[submodule "Mods/Snow-s-Mods"]
+	path = Mods/Snow-s-Mods
+	url = https://github.com/RattlingSnow353/Snow-s-Mods
