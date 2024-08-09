@@ -2,8 +2,8 @@
 --- MOD_NAME: House Rules
 --- MOD_ID: HouseRules
 --- MOD_AUTHOR: [Mysthaps]
---- MOD_DESCRIPTION: Adds difficulty modifiers for your runs, stackable with stakes
---- VERSION: 1.4.2
+--- MOD_DESCRIPTION: Adds difficulty modifiers for your runs, stackable with stakes. Thanks Eremel for Galdur support!
+--- VERSION: 1.4.3
 
 --[[
 
@@ -40,7 +40,6 @@ local localization = {
     m_rental_increase = "Rental Jokers take $1 more each round",
     m_booster_ante_scaling = "Booster Packs cost $1 more per Ante",
     m_booster_less_choices = "Booster Packs offer 1 less choice",
-    m_old_ante_scaling = "1.0.0 Ante scaling",
     m_minus_hand_size_per_X_dollar = "-1 hand size for every $5 you have",
     m_debuff_common = "All Common Jokers are debuffed",
     m_debuff_uncommon = "All Uncommon Jokers are debuffed",
@@ -50,11 +49,9 @@ local localization = {
     m_chips_dollar_cap = "Chips cannot exceed the current $",
     m_all_pinned = "All Jokers are Pinned",
     --m_no_back_effects = "Disable all Deck effects",
-    m_bobm = "Start with a bobm (MystJokers)",
-    m_chance_every_hand = "Whenever cards are drawn, use Chance (MoreConsumables)",
-    m_six_card_hands = "Must play 6 card hand types (HandOfSix)",
     m_all_jokers_flipped = "All Jokers in shop and Booster Packs are flipped",
     m_all_consumables_flipped = "All consumables in shop and Booster Packs are flipped",
+    gald_house_rules = "House Rules"
 }
 
 local all_modifiers = {
@@ -102,7 +99,7 @@ local all_modifiers = {
 
     -- Legacy
     "booster_ante_scaling",
-    "old_ante_scaling",
+    "",
     "",
     "",
     "",
@@ -136,6 +133,7 @@ sendDebugMessage("Loaded HouseRules~")
 local run_setup_optionref = G.UIDEF.run_setup_option
 function G.UIDEF.run_setup_option(type)
     local t = run_setup_optionref(type)
+    if Galdur then return t end
     local button = 
     { n = G.UIT.R, config = { align = "cm", padding = 0 }, nodes = {
         { n = G.UIT.C, config = { align = "cm", minw = 2.4 }, nodes = {} },
@@ -157,7 +155,8 @@ end
 -- Create a modifier row
 function add_modifier_node(modifier_name, run_info)
     if not modifier_name or modifier_name == "" then
-        return 
+        if Galdur then return end
+        return
         { n = G.UIT.R, config = {align = "c", minw = 8, padding = 0, colour = G.C.CLEAR}, nodes = {
             {n = G.UIT.C, config = { align = "cr", padding = 0.1 }, nodes = {}},
             {n = G.UIT.C, config = { align = "c", padding = 0 }, nodes = {
@@ -167,11 +166,11 @@ function add_modifier_node(modifier_name, run_info)
     end
     return 
     { n = G.UIT.R, config = {align = "c", minw = 8, padding = 0, colour = G.C.CLEAR}, nodes = {
-        {n = G.UIT.C, config = { align = "cr", padding = 0.1 }, nodes = {
-            run_info and nil or create_toggle{ col = true, label = "", w = 0, scale = 0.6, shadow = true, ref_table = G.HouseRules_modifiers, ref_value = modifier_name },
+        {n = G.UIT.C, config = { align = Galdur and "cl" or "cr", padding = not Galdur and 0.1 }, nodes = {
+            run_info and nil or create_toggle{ col = true, label = "", w = 0, scale = Galdur and 0.5 or 0.6, shadow = true, ref_table = G.HouseRules_modifiers, ref_value = modifier_name },
         }},
         {n = G.UIT.C, config = { align = "c", padding = 0 }, nodes = {
-            { n = G.UIT.T, config = { text = localize('m_'..modifier_name), scale = 0.3, colour = G.C.UI.TEXT_LIGHT, shadow = true }},
+            { n = G.UIT.T, config = { text = localize('m_'..modifier_name), scale = Galdur and 0.27 or 0.3, colour = G.C.UI.TEXT_LIGHT, shadow = true }},
         }},
     }}
 end
@@ -190,7 +189,7 @@ function create_UIBox_modifiers()
     return true end)}))
 
     local t = create_UIBox_generic_options({ back_id = G.STATE == G.STATES.GAME_OVER and 'from_game_over', back_func = 'setup_run', contents = {
-        { n = G.UIT.R, config = { align = "cm", padding = 0.1, minh = 9, minw = 4.2 }, nodes = {
+        { n = G.UIT.R, config = { align = "cm", padding = 0.1, minh = Galdur and 6 or 9, minw = 4.2 }, nodes = {
             { n = G.UIT.O, config = { id = 'modifiers_list', object = Moveable() }},
         }},
         { n = G.UIT.R, config = { align = "cm" }, nodes = {
@@ -236,88 +235,8 @@ function modifiers_page(_page)
         modifiers_list[#modifiers_list + 1] = add_modifier_node(nil)
     end
   
-    return {n=G.UIT.ROOT, config={align = "c", padding = 0, colour = G.C.CLEAR}, nodes = modifiers_list}
+    return {n=G.UIT.ROOT, config={align = Galdur and "tl" or "c", padding = 0, colour = G.C.CLEAR}, nodes = modifiers_list}
 end
-
---[[ Add modifiers page to run info
-local create_tabsref = create_tabs
-function create_tabs(args)
-    if args.tabs then
-        for _, v in pairs(args.tabs) do
-            if v.label == localize('b_vouchers') then
-                args.tabs[#args.tabs+1] = {
-                    label = localize('b_modifiers_cap'),
-                    tab_definition_function = modifiers_run_info,
-                }
-                break
-            end
-        end
-    end
-    return create_tabsref(args)
-end
-
--- Run Info modifiers list
-function modifiers_run_info()
-    G.MODIFIERS_PAGE_SIZE = 12
-    local page_options = {}
-    sendDebugMessage(#G.GAME.modifiers)
-    for i = 1, math.ceil(#G.GAME.modifiers/G.MODIFIERS_PAGE_SIZE) do
-        sendDebugMessage("page "..i)
-        table.insert(page_options, localize('k_page')..' '..tostring(i)..'/'..tostring(math.ceil(#G.GAME.modifiers/MODIFIERS_PAGE_SIZE)))
-    end
-
-    local t = 
-    { n = G.UIT.ROOT, config = {align = "c", padding = 0.2, colour = G.C.CLEAR}, nodes = {
-        { n = G.UIT.R, config = { align = "cm", padding = 0.1, minh = 9, minw = 4.2 }, nodes = {
-            { n = G.UIT.O, config = { id = 'modifiers_list_run_info', object = Moveable() }},
-        }},
-        { n = G.UIT.R, config = { align = "cm" }, nodes = {
-            create_option_cycle({options = page_options, w = 4.5, cycle_shoulders = true, opt_callback = 'modifiers_run_info_change_page', current_option = 1, colour = G.C.RED, no_pips = true, focus_args = {snap_to = true, nav = 'wide'}})
-        }},
-    }}
-    return t
-end
-
-G.FUNCS.modifiers_run_info_change_page = function(args)
-    if not args or not args.cycle_config then return end
-    if G.OVERLAY_MENU then
-        local m_list = G.OVERLAY_MENU:get_UIE_by_ID('modifiers_list_run_info')
-        if m_list then
-            if m_list.config.object then
-                m_list.config.object:remove()
-            end
-            m_list.config.object = UIBox {
-                definition = modifiers_run_info_page(args.cycle_config.current_option - 1),
-                config = { offset = { x = 0, y = 0 }, align = 'cm', parent = m_list }
-            }
-        end
-    end
-end
-
-function modifiers_run_info_page(_page)
-    sendDebugMessage("setting up page ".._page)
-    local modifiers = {}
-    local modifiers_list = {}
-
-    for _, v in ipairs(all_modifiers) do
-        if G.GAME.modifiers[v] then
-            sendDebugMessage("found modifier: "..v)
-            modifiers[#modifiers+1] = v
-        end
-    end
-
-    for k, v in ipairs(modifiers) do
-        if k > 12 * (_page or 0) and k <= 12 * ((_page or 0) + 1) then
-            modifiers_list[#modifiers_list + 1] = add_modifier_node(v, true)
-        end
-    end
-
-    for _ = #modifiers_list+1, 12 do
-        modifiers_list[#modifiers_list + 1] = add_modifier_node(nil, true)
-    end
-  
-    return {n=G.UIT.ROOT, config={align = "c", padding = 0, colour = G.C.CLEAR}, nodes = modifiers_list}
-end]]
 
 ---- Apply Modifiers to run
 local start_runref = Game.start_run
@@ -334,19 +253,23 @@ function Game.start_run(self, args)
         }
     }
 
-    -- hmst
-    for k, v in pairs(G.HouseRules_modifiers) do
-        if v then
-            if k == "flipped_cards" then table.insert(args.challenge.rules.custom, {id = 'flipped_cards', value = 4})
-            elseif k == "discard_cost" then table.insert(args.challenge.rules.custom, {id = 'discard_cost', value = 1})
-            elseif k == "minus_hand_size_per_X_dollar" then table.insert(args.challenge.rules.custom, {id = 'minus_hand_size_per_X_dollar', value = 5})
-            elseif k == "set_eternal_ante" then table.insert(args.challenge.rules.custom, {id = 'set_eternal_ante', value = 4})
-            elseif k == "set_joker_slots_ante" then table.insert(args.challenge.rules.custom, {id = 'set_joker_slots_ante', value = 4})
-            else table.insert(args.challenge.rules.custom, {id = k}) end
-        end
+    for k, v in pairs(args.challenge.rules.custom) do
+        sendDebugMessage(v.id)
     end
 
     start_runref(self, args)
+
+    -- hmst
+    for k, v in pairs(G.HouseRules_modifiers) do
+        if v then
+            if k == "flipped_cards" then G.GAME.modifiers.flipped_cards = 4
+            elseif k == "discard_cost" then G.GAME.modifiers.discard_cost = 1
+            elseif k == "minus_hand_size_per_X_dollar" then G.GAME.modifiers.minus_hand_size_per_X_dollar = 5
+            elseif k == "set_eternal_ante" then G.GAME.modifiers.set_eternal_ante = 4
+            elseif k == "no_shop_jokers" then G.GAME.joker_rate = 0
+            else G.GAME.modifiers[k] = true end
+        end
+    end
 
     if G.GAME.modifiers.minus_discard then 
         self.GAME.starting_params.discards = self.GAME.starting_params.discards - 1 
@@ -387,13 +310,6 @@ function Game.start_run(self, args)
     if G.GAME.modifiers.minus_shop_card then G.GAME.shop.joker_max = G.GAME.shop.joker_max - 1 end
     if G.GAME.modifiers.perishable_early then G.GAME.perishable_rounds = G.GAME.perishable_rounds - 2 end
     if G.GAME.modifiers.rental_increase then G.GAME.rental_rate = G.GAME.rental_rate + 1 end
-    if G.GAME.modifiers.bobm and G.P_CENTERS["j_myst_bobm"] then
-        local card = Card(G.play.T.x + G.play.T.w/2 - G.CARD_W/2, G.play.T.y + G.play.T.h/2-G.CARD_H/2, G.CARD_W, G.CARD_H, 
-        G.P_CARDS.empty, G.P_CENTERS["j_myst_bobm"], {bypass_discovery_center = true, bypass_discovery_ui = true})
-        card:add_to_deck()
-        G.jokers:emplace(card)
-        card:start_materialize()
-    end
 end
 
 
@@ -425,7 +341,7 @@ end
 local create_cardref = create_card
 function create_card(_type, area, legendary, _rarity, skip_materialize, soulable, forced_key, key_append)
     local card = create_cardref(_type, area, legendary, _rarity, skip_materialize, soulable, forced_key, key_append)
-    if _type == "Joker" then
+    if _type == "Joker" or _type == "Abnormality" then
         if G.GAME.modifiers.all_eternal_mod then
             card:set_eternal(true)
         end
@@ -500,27 +416,6 @@ function generate_card_ui(_c, full_UI_table, specific_vars, card_type, badges, h
     return obj
 end
 
--- old_ante_scaling
-local get_blind_amountref = get_blind_amount
-function get_blind_amount(ante)
-    if not G.GAME.modifiers.old_ante_scaling then return get_blind_amountref(ante) end
-    local k = 0.75
-    local amounts = {}
-    if not G.GAME.modifiers.scaling or G.GAME.modifiers.scaling == 1 then
-        amounts = { 300, 800, 2800, 6000, 11000, 20000, 35000, 50000 }
-    elseif G.GAME.modifiers.scaling == 2 then
-        amounts = { 300, 1000, 3200, 9000, 18000, 32000, 56000, 90000 }
-    elseif G.GAME.modifiers.scaling == 3 then
-        amounts = { 300, 1200, 3600, 10000, 25000, 50000, 90000, 180000 }
-    end
-    if ante < 1 then return 100 end
-    if ante <= 8 then return amounts[ante] end
-    local a, b, c, d = amounts[8], 1.6, ante - 8, 1 + 0.2 * (ante - 8)
-    local amount = math.floor(a * (b + (k * c) ^ d) ^ c)
-    amount = amount - amount % (10 ^ math.floor(math.log10(amount) - 1))
-    return amount
-end
-
 -- all_flipped
 local cardarea_emplaceref = CardArea.emplace
 function CardArea.emplace(self, card, location, stay_flipped)
@@ -532,4 +427,42 @@ function CardArea.emplace(self, card, location, stay_flipped)
         card.sprite_facing = 'back'
         card.pinch.x = false
     end
+end
+
+local function galdur_page()
+    Galdur.generate_deck_preview()
+    Galdur.populate_deck_preview(Galdur.run_setup.choices.deck, true)
+    Galdur.generate_chip_tower()
+    Galdur.populate_chip_tower(math.min(get_deck_win_galdur(Galdur.run_setup.choices.deck.effect.center, true)+1, #G.P_CENTER_POOLS.Stake), true)
+
+    local page_options = {
+        "Basic",
+        "Challenges",
+        "Jokers",
+        "Legacy",
+    }
+    G.E_MANAGER:add_event(Event({func = (function()
+        G.FUNCS.modifiers_change_page{cycle_config = {current_option = 1}}
+    return true end)}))
+
+    return 
+    {n=G.UIT.ROOT, config={align = "tm", minh = 3.8, colour = G.C.CLEAR, padding=0.1}, nodes={
+        {n=G.UIT.C, config = {padding = 0.15}, nodes ={   
+            {n=G.UIT.R, config={align = "cm", minh = 0.45+G.CARD_H+G.CARD_H, minw = 10.7, colour = G.C.BLACK, padding = 0.15, r = 0.1, emboss = 0.05}, nodes = {
+                    { n = G.UIT.O, config = { id = 'modifiers_list', object = Moveable() }},
+            }},
+            create_option_cycle({options = page_options, w = 4.5, cycle_shoulders = true, opt_callback = 'modifiers_change_page', current_option = 1, colour = G.C.RED, no_pips = true, focus_args = {snap_to = true, nav = 'wide'}})
+        }},
+        Galdur.display_chip_tower(),
+        Galdur.display_deck_preview()
+    }}
+end
+
+if Galdur then
+    Galdur.add_new_page({
+        definition = galdur_page,
+        name = 'gald_house_rules',
+        -- pre_start = pre_game_start,
+        -- post_start = post_game_start
+    })
 end
