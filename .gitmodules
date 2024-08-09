@@ -53,9 +53,6 @@
 [submodule "Mods/Stickers-Always-Shown"]
 	path = Mods/Stickers-Always-Shown
 	url = https://github.com/Dimserene/Stickers-Always-Shown
-[submodule "Mods/Betmma_mods"]
-	path = Mods/Betmma_mods
-	url = https://github.com/betmma/my_balatro_mods
 [submodule "Mods/FoldButton"]
 	path = Mods/FoldButton
 	url = https://github.com/happinyz/BalatroFoldButton
@@ -71,9 +68,6 @@
 [submodule "Mods/KCVanilla"]
 	path = Mods/KCVanilla
 	url = https://github.com/kcgidw/kcvanilla
-[submodule "Mods/Jeantoine"]
-	path = Mods/Jeantoine
-	url = https://github.com/Kaishi130/Jeantoine
 [submodule "Mods/MoreJokerPacks"]
 	path = Mods/MoreJokerPacks
 	url = https://github.com/Samario1/MoreJokerPacks
