@@ -16,9 +16,6 @@
 [submodule "Mods/BossJokers"]
 	path = Mods/BossJokers
 	url = https://github.com/KilledByLava/BossJokers
-[submodule "Mods/JankJonklers"]
-	path = Mods/JankJonklers
-	url = https://github.com/spikeof2010/JankJonklers
 [submodule "Mods/Jimbo-s-Pack"]
 	path = Mods/Jimbo-s-Pack
 	url = https://github.com/art-muncher/Jimbo-s-Pack
@@ -110,3 +107,9 @@
 [submodule "Mods/Jestobiology"]
 	path = Mods/Jestobiology
 	url = https://github.com/spikeof2010/Jestobiology
+[submodule "Mods/JankJonklers"]
+	path = Mods/JankJonklers
+	url = https://github.com/Dimserene/JankJonklers
+[submodule "Mods/ModpackDecks"]
+	path = Mods/ModpackDecks
+	url = https://github.com/Dimserene/ModpackDecks
