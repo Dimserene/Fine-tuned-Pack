@@ -17,7 +17,7 @@ SMODS.Atlas{
     --- Frontier Deck
 
         SMODS.Back{
-            key = "b_moon_base",
+            key = "b_frontier",
             name = "Frontier Deck",
             pos = {x = 0, y = 0},
             loc_txt = {
@@ -40,6 +40,32 @@ SMODS.Atlas{
         }
         atlas = "enhancers"
 
+
+    --- Grocery Deck
+
+        SMODS.Back{
+            key = "b_grocery",
+            name = "Grocery Deck(WIP)",
+            pos = {x = 0, y = 1},
+            loc_txt = {
+                name = "Grocery Deck(WIP)",
+                text = {
+                    "Start run with",
+                    "an {C:eternal}Eternal{} and {C:dark_edition}Negative{} {C:attention}Cut The Cheese",
+                    "Require Jank Jonklers"
+                }
+            },
+            apply = function(back)
+                G.E_MANAGER:add_event(Event({
+                    func = function()
+                        add_joker("j_jank_cut_the_cheese", "negative", true, true)
+                        return true
+                    end
+                }))
+            end,
+            atlas = "enhancers"
+        }
+        atlas = "enhancers"
 return
 
 ----------------------------------------------
