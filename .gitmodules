@@ -107,9 +107,9 @@
 [submodule "Mods/JankJonklers"]
 	path = Mods/JankJonklers
 	url = https://github.com/Dimserene/JankJonklers
-[submodule "Mods/ModpackDecks"]
-	path = Mods/ModpackDecks
-	url = https://github.com/Dimserene/ModpackDecks
 [submodule "Mods/SpicyJokers"]
 	path = Mods/SpicyJokers
 	url = https://github.com/Dimserene/SpicyJokers
+[submodule "Mods/ModpackDecks"]
+	path = Mods/ModpackDecks
+	url = https://github.com/Dimserene/ModpackDecks
