@@ -47,9 +47,6 @@
 [submodule "Mods/DebugPlus"]
 	path = Mods/DebugPlus
 	url = https://github.com/Dimserene/DebugPlus
-[submodule "Mods/Stickers-Always-Shown"]
-	path = Mods/Stickers-Always-Shown
-	url = https://github.com/Dimserene/Stickers-Always-Shown
 [submodule "Mods/FoldButton"]
 	path = Mods/FoldButton
 	url = https://github.com/happinyz/BalatroFoldButton
@@ -113,3 +110,6 @@
 [submodule "Mods/ModpackDecks"]
 	path = Mods/ModpackDecks
 	url = https://github.com/Dimserene/ModpackDecks
+[submodule "Mods/Balatro-Stickers-Always-Shown"]
+	path = Mods/Balatro-Stickers-Always-Shown
+	url = https://github.com/SirMaiquis/Balatro-Stickers-Always-Shown
