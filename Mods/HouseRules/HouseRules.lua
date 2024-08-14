@@ -433,7 +433,7 @@ local function galdur_page()
     Galdur.generate_deck_preview()
     Galdur.populate_deck_preview(Galdur.run_setup.choices.deck, true)
     Galdur.generate_chip_tower()
-    Galdur.populate_chip_tower(math.min(get_deck_win_galdur(Galdur.run_setup.choices.deck.effect.center, true)+1, #G.P_CENTER_POOLS.Stake), true)
+    Galdur.populate_chip_tower(Galdur.run_setup.choices.stake, true)
 
     local page_options = {
         "Basic",
