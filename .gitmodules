@@ -113,3 +113,18 @@
 [submodule "Mods/Stickers-Always-Shown"]
 	path = Mods/Stickers-Always-Shown
 	url = https://github.com/SirMaiquis/Balatro-Stickers-Always-Shown
+[submodule "Mods/Paperback"]
+	path = Mods/Paperback
+	url = https://github.com/GitNether/Paperback
+[submodule "Mods/Handy"]
+	path = Mods/Handy
+	url = https://github.com/SleepyG11/HandyBalatro
+[submodule "Mods/Galdur"]
+	path = Mods/Galdur
+	url = https://github.com/Eremel/Galdur/
+[submodule "Mods/AncientJokerFix"]
+	path = Mods/AncientJokerFix
+	url = https://github.com/gabepesco/BalatroAncientJokerFix
+[submodule "Mods/Alices_Annum"]
+	path = Mods/Alices_Annum
+	url = https://github.com/ThreeCubed273/alices_annum_balatro_mod
