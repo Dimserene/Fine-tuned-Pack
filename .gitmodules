@@ -86,9 +86,6 @@
 [submodule "Mods/Joker-Evolution"]
 	path = Mods/Joker-Evolution
 	url = https://github.com/SDM0/Joker-Evolution
-[submodule "Mods/Bunco"]
-	path = Mods/Bunco
-	url = https://github.com/Firch/Bunco
 [submodule "Mods/Bird-Jokers"]
 	path = Mods/Bird-Jokers
 	url = https://github.com/JustinBanzon/Bird-Jokers
@@ -128,3 +125,6 @@
 [submodule "Mods/Alices_Annum"]
 	path = Mods/Alices_Annum
 	url = https://github.com/ThreeCubed273/alices_annum_balatro_mod
+[submodule "Mods/Bunco"]
+	path = Mods/Bunco
+	url = https://github.com/Dimserene/Bunco
