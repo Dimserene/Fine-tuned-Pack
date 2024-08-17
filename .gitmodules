@@ -68,9 +68,6 @@
 [submodule "Mods/Virtues"]
 	path = Mods/Virtues
 	url = https://github.com/someone23832/Virtues
-[submodule "Mods/VanillaExpansion"]
-	path = Mods/VanillaExpansion
-	url = https://github.com/nekojoe/VanillaExpansion
 [submodule "Mods/StackedRedSeals"]
 	path = Mods/StackedRedSeals
 	url = https://github.com/cerloCasa/StackedRedSeals
