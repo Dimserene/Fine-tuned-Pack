@@ -70,12 +70,36 @@ G.E_MANAGER:add_event(Event({
 match_indent = true
 
 # Fix sort_id causing inconsistent RNG when loading saves on game relaunch
+# Add Ankh run-specific sort ID
 [[patches]]
 [patches.pattern]
 target = "card.lua"
 pattern = "self.sort_id = cardTable.sort_id"
 position = "after"
-payload = "G.sort_id = math.max(self.sort_id, G.sort_id or 0)"
+payload = '''self.ankh_id = cardTable.ankh_id
+G.sort_id = math.max(self.sort_id, G.sort_id or 0)
+G.GAME.ankh_id = math.max(self.ankh_id, G.GAME.ankh_id or 0)
+'''
+match_indent = true
+
+# Add Ankh run-specific sort ID
+[[patches]]
+[patches.pattern]
+target = "card.lua"
+pattern = "G.sort_id = (G.sort_id or 0) + 1"
+position = "before"
+payload = '''G.GAME.ankh_id = (G.GAME.ankh_id or 0) + 1
+self.ankh_id = G.GAME.ankh_id
+'''
+match_indent = true
+
+# Add Ankh run-specific sort ID
+[[patches]]
+[patches.pattern]
+target = "card.lua"
+pattern = "sort_id = self.sort_id,"
+position = "before"
+payload = "ankh_id = self.ankh_id,"
 match_indent = true
 
 # Show Ankh spectral when loading a replay

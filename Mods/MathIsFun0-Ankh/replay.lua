@@ -336,8 +336,10 @@ function Game:update(dt)
                             if k >= 3 and tonumber(v) then
                                 k = k - 2
                                 v = tonumber(v)
-                                if k < v then
-                                    G.hand.cards[k], G.hand.cards[v] = G.hand.cards[v], G.hand.cards[k]
+                                for i = 1, #G.hand.cards do
+                                    if G.hand.cards[i].ankh_id == v then
+                                        G.hand.cards[k],G.hand.cards[i]=G.hand.cards[i],G.hand.cards[k]
+                                    end
                                 end
                             end
                         end
@@ -356,8 +358,10 @@ function Game:update(dt)
                             if k >= 3 and tonumber(v) then
                                 k = k - 2
                                 v = tonumber(v)
-                                if k < v then
-                                    G.jokers.cards[k], G.jokers.cards[v] = G.jokers.cards[v], G.jokers.cards[k]
+                                for i = 1, #G.jokers.cards do
+                                    if G.jokers.cards[i].ankh_id == v then
+                                        G.jokers.cards[k],G.jokers.cards[i]=G.jokers.cards[i],G.jokers.cards[k]
+                                    end
                                 end
                             end
                         end
@@ -376,8 +380,10 @@ function Game:update(dt)
                             if k >= 3 and tonumber(v) then
                                 k = k - 2
                                 v = tonumber(v)
-                                if k < v then
-                                    G.consumeables.cards[k], G.consumeables.cards[v] = G.consumeables.cards[v], G.consumeables.cards[k]
+                                for i = 1, #G.consumeables.cards do
+                                    if G.consumeables.cards[i].ankh_id == v then
+                                        G.consumeables.cards[k],G.consumeables.cards[i]=G.consumeables.cards[i],G.consumeables.cards[k]
+                                    end
                                 end
                             end
                         end
@@ -559,13 +565,112 @@ function Blind:drawn_to_hand()
 end
 
 G.FUNCS.viewSelectedReplay = function(e)
+    G.security = {}
+    G.security_page = 1
+    DejaVu.replay_file = e.config.file
+    DejaVu.replay = DejaVu.decode(nativefs.read(lovely.mod_dir.."/MathIsFun0-Ankh/Runs/"..e.config.file))
+    local contents = DejaVu.replay
+    for i = 1, #contents do
+        if contents[i].security then
+            G.security[#G.security+1] = contents[i]
+        end
+    end
+    DejaVu.replay = nil
+    create_UIBox_replay()
+end
+function create_UIBox_replay()
+    local tabs = create_tabs({
+        snap_to_nav = true,
+        colour = G.C.BOOSTER,
+        tabs = {
+            {
+                label = "Replays",
+                chosen = true,
+                tab_definition_function = function()
+                    return {
+                        n = G.UIT.ROOT,
+                        config = {
+                            emboss = 0.05,
+                            minh = 6,
+                            r = 0.1,
+                            minw = 6,
+                            align = "tm",
+                            padding = 0.2,
+                            colour = G.C.BLACK,
+                            id = "replay"
+                        },
+                        nodes = {
+                            {
+                                n = G.UIT.R,
+                                config = { align = "cm", padding = 0.04 },
+                                nodes = {UIBox_button{ label = {"View Replay"}, button = "watchSelectedReplay", minw = 5, minh = 0.7, scale = 1},
+                                        {
+                                            n = G.UIT.R,
+                                            config = {align = "cm", padding = 0.1},
+                                            nodes = {{
+                                                n = G.UIT.T,
+                                                config = {text = "This tab is under construction!", scale = 0.4, shadow = true, colour = G.C.WHITE}
+                                            }}
+                                        }}
+                            }
+                        }
+                    }
+                end
+            },
+            {
+                label = "Security",
+                tab_definition_function = function()
+                    return {
+                        n = G.UIT.ROOT,
+                        config = {
+                            emboss = 0.05,
+                            minh = 6,
+                            r = 0.1,
+                            minw = 6,
+                            align = "tm",
+                            padding = 0.2,
+                            colour = G.C.BLACK,
+                            id = "replay"
+                        },
+                        nodes = {DejaVu.securityUI(G.security[G.security_page])}
+                    }
+                end
+            },
+        }})
+    local replayUI = G.OVERLAY_MENU:get_UIE_by_ID('replay')
+    if not replayUI then
+        G.FUNCS.overlay_menu{
+            definition = create_UIBox_generic_options({
+                back_func = "viewReplay",
+                contents = {tabs}
+            }),
+        config = {offset = {x=0,y=10}}
+        }
+    else
+        G.FUNCS.overlay_menu{
+            definition = create_UIBox_generic_options({
+                back_func = "viewReplay",
+                contents = {tabs}
+            }),
+        config = {offset = {x=0,y=0}}
+        }
+    end
+end
+
+G.FUNCS.watchSelectedReplay = function(e)
     G.FUNCS.exit_overlay_menu()
     local function find_challenge(c)
         for k, v in pairs(G.CHALLENGES) do
             if v.id == c then return v end
         end
     end
-    DejaVu.replay = DejaVu.decode(nativefs.read(lovely.mod_dir.."/MathIsFun0-Ankh/Runs/"..e.config.file))
+    DejaVu.replay = DejaVu.decode(nativefs.read(lovely.mod_dir.."/MathIsFun0-Ankh/Runs/"..DejaVu.replay_file))
+    local contents = DejaVu.replay
+    for i = #contents, 1, -1 do
+        if contents[i].security then
+            table.remove(contents, i)
+        end
+    end
     G.GAME.viewed_back = G.P_CENTERS[DejaVu.replay[1][4]]
     G.FUNCS.start_run(nil, {stake = G.P_STAKES[DejaVu.replay[1][3]].stake_level, seed = DejaVu.replay[1][5], challenge = DejaVu.replay[1][6] and find_challenge(DejaVu.replay[1][6])})
     DejaVu.replayMode_pre = true

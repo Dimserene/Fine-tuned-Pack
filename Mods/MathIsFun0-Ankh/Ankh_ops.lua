@@ -14,7 +14,7 @@ Speedrun.TIMERS = {
 }
 G.PROFILES["Official Mode*"] = {}
 G.PROFILES["Official Mode*"].name = "Official Mode"
-Speedrun.VER = "Ankh v1.1.0-beta"
+Speedrun.VER = "Ankh v2.0.0-beta2"
 Speedrun.C_SATURATION = 0.42
 Speedrun.C_VALUE = 0.89
 Speedrun.SETTINGS = {
@@ -424,6 +424,26 @@ G.FUNCS.ankhMenu = function(e)
                     }),  
                     UIBox_button{ label = {"View a Replay"}, button = "viewReplay", minw = 5, minh = 0.7, scale = 0.6},
                   }
+                }
+              return tab
+            end
+          },
+          {
+              label = "Security",
+              chosen = false,
+              tab_definition_function = function()
+                local tab = {
+                  n = G.UIT.ROOT,
+                  config = {
+                      emboss = 0.05,
+                      minh = 6,
+                      r = 0.1,
+                      minw = 10,
+                      align = "cm",
+                      padding = 0.2,
+                      colour = G.C.BLACK
+                  },
+                  nodes = {DejaVu.securityUI()}
                 }
               return tab
             end
