@@ -15,6 +15,8 @@ This is not a full list of 1.0.0 compatible mods, this is a modpack that when pu
 
 If you wanna join us dealing with this nightmare beast, you can join our [Discord](https://discord.com/channels/1116389027176787968/1255696773599592458)
 
+(If you don't have access to Balatro official discord, click [here](https://discord.com/invite/balatro) first)
+
 ## Prerequisites
 
 - Install [Git](https://git-scm.com/)

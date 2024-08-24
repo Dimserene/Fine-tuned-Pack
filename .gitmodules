@@ -68,9 +68,6 @@
 [submodule "Mods/Virtues"]
 	path = Mods/Virtues
 	url = https://github.com/someone23832/Virtues
-[submodule "Mods/VanillaExpansion"]
-	path = Mods/VanillaExpansion
-	url = https://github.com/nekojoe/VanillaExpansion
 [submodule "Mods/StackedRedSeals"]
 	path = Mods/StackedRedSeals
 	url = https://github.com/cerloCasa/StackedRedSeals
@@ -86,9 +83,6 @@
 [submodule "Mods/Joker-Evolution"]
 	path = Mods/Joker-Evolution
 	url = https://github.com/SDM0/Joker-Evolution
-[submodule "Mods/Bunco"]
-	path = Mods/Bunco
-	url = https://github.com/Firch/Bunco
 [submodule "Mods/Bird-Jokers"]
 	path = Mods/Bird-Jokers
 	url = https://github.com/JustinBanzon/Bird-Jokers
@@ -131,3 +125,6 @@
 [submodule "Mods/BBBalatro"]
 	path = Mods/BBBalatro
 	url = https://github.com/BBBalatroMod/BBBalatro
+[submodule "Mods/Bunco"]
+	path = Mods/Bunco
+	url = https://github.com/Dimserene/Bunco
