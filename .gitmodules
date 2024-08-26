@@ -128,3 +128,9 @@
 [submodule "Mods/Bunco"]
 	path = Mods/Bunco
 	url = https://github.com/Dimserene/Bunco
+[submodule "Mods/LoveForFibonacci"]
+	path = Mods/LoveForFibonacci
+	url = https://github.com/Dimserene/LoveForFibonacci
+[submodule "Mods/Balatro-Jokers-Plus"]
+	path = Mods/Balatro-Jokers-Plus
+	url = https://github.com/KaviD-115/Balatro-Jokers-Plus
