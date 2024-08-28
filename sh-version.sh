@@ -15,13 +15,13 @@ prompt_to_continue() {
 
 # Function to prompt user to press any key to continue
 prompt_any_key() {
-    echo -n "$1 (press any key to continue)"
+    echo -n "$1 (press enter to continue)"
     read _
     echo
 }
 
 # Initial prompt to continue or quit
-prompt_to_continue "Do you want to continue with the script?"
+prompt_to_continue "Do you want to update Fine-tuned-Pack?"
 
 # Pull the latest changes from the remote repository
 git pull
@@ -30,7 +30,7 @@ git pull
 git submodule update --remote --recursive --merge
 
 # Prompt user to continue editing CurrentVersion.txt
-if prompt_to_continue "Ready to edit CurrentVersion.txt?"; then
+if prompt_to_continue "Edit CurrentVersion.txt?"; then
     # Open the CurrentVersion.txt file for editing in the nano text editor
     nano ./CurrentVersion.txt
 fi

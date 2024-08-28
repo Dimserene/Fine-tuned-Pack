@@ -5,7 +5,7 @@ Main modpack: [Dimserene's Modpack](https://github.com/Dimserene/Dimserenes-Modp
 
 Mod List: [Google Sheet](https://docs.google.com/spreadsheets/d/1L2wPG5mNI-ZBSW_ta__L9EcfAw-arKrXXVD-43eU4og/)
 
-#### Thank you all the mod authors, [@humplydinkle](https://github.com/Depressomane), and many others on discord for helping and testing!
+#### Thank you all the mod authors and many others on discord for helping and testing!
 (Updates frequently)
 Custom-made modpacks that are hand-picked and put together by myself
 
