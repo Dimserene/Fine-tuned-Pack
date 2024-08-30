@@ -1,0 +1,30 @@
+name: Update Modpack
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  update-modpack:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Git user
+      run: |
+        git config --global user.name "Auto Update Bot"
+        git config --global user.email "raul0520@google.com"
+
+    - name: Run version update script
+      run: |
+        chmod +x ./autoversion.sh
+        ./autoversion.sh
+
+    - name: Push changes
+      run: |
+        git push origin main
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
