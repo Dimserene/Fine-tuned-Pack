@@ -1,25 +1,5 @@
 #!/bin/bash
 
-# Function to prompt user and wait for a response with options (y, n, q)
-prompt_to_continue() {
-    while true; do
-        read -p "$1 (press y to continue, n to skip, q to quit): " ynq
-        case $ynq in
-            [Yy]* ) return 0;;  # User chose to continue
-            [Nn]* ) return 1;;  # User chose to skip the action
-            [Qq]* ) echo "Quitting."; exit;;  # User chose to quit the script
-            * ) echo "Please answer y, n, or q.";;  # Invalid input, prompt again
-        esac
-    done
-}
-
-# Function to prompt user to press any key to continue
-prompt_any_key() {
-    echo -n "$1 (press enter to continue)"
-    read _  # Wait for the user to press enter
-    echo
-}
-
 # Function to generate the new version string based on the latest commit message
 generate_new_version_string() {
     # Get the latest commit message
@@ -54,11 +34,6 @@ generate_new_version_string() {
 # Get the name of the current working folder
 working_folder_name=$(basename "$PWD")
 
-# Initial prompt to ask the user if they want to update the working folder
-if ! prompt_to_continue "Do you want to update ${working_folder_name}?"; then
-    exit  # Exit if the user chooses not to update
-fi
-
 # Pull the latest changes from the remote repository
 git pull
 
@@ -80,12 +55,9 @@ uncommitted_changes=$(git status --porcelain | grep -v "CurrentVersion.txt\|Vers
 if [ -n "$uncommitted_changes" ]; then
     # There are uncommitted changes, so proceed with updating the version and committing
 
-    # Prompt the user to update the CurrentVersion.txt file, showing the old and new version
-    if prompt_to_continue "Update CurrentVersion.txt? ${old_version_string} -> ${new_version_string}"; then
-        # If the user agrees, write the new version string to CurrentVersion.txt
-        echo "$new_version_string" > ./CurrentVersion.txt
-        echo "New version string: $new_version_string written to CurrentVersion.txt"
-    fi
+    # Update the CurrentVersion.txt file with the new version string
+    echo "$new_version_string" > ./CurrentVersion.txt
+    echo "New version string: $new_version_string written to CurrentVersion.txt"
 
     # Copy the updated CurrentVersion.txt file to the Mods/ModpackUtil/ directory
     cp ./CurrentVersion.txt ./Mods/ModpackUtil/
@@ -102,9 +74,7 @@ if [ -n "$uncommitted_changes" ]; then
     # Push the committed changes to the remote repository
     git push
 
-    # Prompt user after pushing changes to confirm the process completion
-    prompt_any_key "Changes pushed to the remote repository."
-
+    echo "Changes pushed to the remote repository."
 else
     # No uncommitted changes detected
     echo "No changes detected excluding CurrentVersion.txt and VersionTime.txt. No new commit made."
