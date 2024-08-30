@@ -55,7 +55,9 @@ generate_new_version_string() {
 working_folder_name=$(basename "$PWD")
 
 # Initial prompt to ask the user if they want to update the working folder
-prompt_to_continue "Do you want to update ${working_folder_name}?"
+if ! prompt_to_continue "Do you want to update ${working_folder_name}?"; then
+    exit  # Exit if the user chooses not to update
+fi
 
 # Pull the latest changes from the remote repository
 git pull
@@ -72,27 +74,38 @@ if [ -f "./CurrentVersion.txt" ]; then
     old_version_string=$(cat ./CurrentVersion.txt)
 fi
 
-# Prompt the user to update the CurrentVersion.txt file, showing the old and new version
-if prompt_to_continue "Update CurrentVersion.txt? ${old_version_string} -> ${new_version_string}"; then
-    # If the user agrees, write the new version string to CurrentVersion.txt
-    echo "$new_version_string" > ./CurrentVersion.txt
-    echo "New version string: $new_version_string written to CurrentVersion.txt"
+# Check for uncommitted changes excluding CurrentVersion.txt and VersionTime.txt
+uncommitted_changes=$(git status --porcelain | grep -v "CurrentVersion.txt\|VersionTime.txt")
+
+if [ -n "$uncommitted_changes" ]; then
+    # There are uncommitted changes, so proceed with updating the version and committing
+
+    # Prompt the user to update the CurrentVersion.txt file, showing the old and new version
+    if prompt_to_continue "Update CurrentVersion.txt? ${old_version_string} -> ${new_version_string}"; then
+        # If the user agrees, write the new version string to CurrentVersion.txt
+        echo "$new_version_string" > ./CurrentVersion.txt
+        echo "New version string: $new_version_string written to CurrentVersion.txt"
+    fi
+
+    # Copy the updated CurrentVersion.txt file to the Mods/ModpackUtil/ directory
+    cp ./CurrentVersion.txt ./Mods/ModpackUtil/
+
+    # Write the current UTC date and time to VersionTime.txt in the Mods/ModpackUtil/ directory
+    date -u "+%Y/%m/%d %H:%M:%S" > Mods/ModpackUtil/VersionTime.txt
+
+    # Stage all changes in the current directory for commit, excluding CurrentVersion.txt and VersionTime.txt
+    git add --all . && git reset Mods/ModpackUtil/CurrentVersion.txt Mods/ModpackUtil/VersionTime.txt
+
+    # Commit the staged changes using the new version string as the commit message
+    git commit -m "$new_version_string"
+
+    # Push the committed changes to the remote repository
+    git push
+
+    # Prompt user after pushing changes to confirm the process completion
+    prompt_any_key "Changes pushed to the remote repository."
+
+else
+    # No uncommitted changes detected
+    echo "No changes detected excluding CurrentVersion.txt and VersionTime.txt. No new commit made."
 fi
-
-# Copy the updated CurrentVersion.txt file to the Mods/ModpackUtil/ directory
-cp ./CurrentVersion.txt ./Mods/ModpackUtil/
-
-# Write the current UTC date and time to VersionTime.txt in the Mods/ModpackUtil/ directory
-date -u "+%Y/%m/%d %H:%M:%S" > Mods/ModpackUtil/VersionTime.txt
-
-# Stage all changes in the current directory for commit
-git add .
-
-# Commit the staged changes using the content of CurrentVersion.txt as the commit message
-git commit -F Mods/ModpackUtil/CurrentVersion.txt
-
-# Push the committed changes to the remote repository
-git push
-
-# Prompt user after pushing changes to confirm the process completion
-prompt_any_key "Changes pushed to the remote repository."
