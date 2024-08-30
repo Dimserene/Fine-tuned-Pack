@@ -7,9 +7,6 @@
 [submodule "Mods/JokerSellValue"]
 	path = Mods/JokerSellValue
 	url = https://github.com/OppositeWolf770/JokerSellValue
-[submodule "Mods/Taikomochi"]
-	path = Mods/Taikomochi
-	url = https://github.com/Amvoled/Taikomochi
 [submodule "Mods/Trance"]
 	path = Mods/Trance
 	url = https://github.com/Dimserene/Trance
