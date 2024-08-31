@@ -64,3 +64,5 @@ git add .
 
 # Commit the staged changes using the content of CurrentVersion.txt as the commit message
 git commit -F Mods/ModpackUtil/CurrentVersion.txt
+
+git push
