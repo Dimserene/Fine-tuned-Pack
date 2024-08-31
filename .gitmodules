@@ -38,9 +38,6 @@
 [submodule "Mods/JokerDisplayModSupport"]
 	path = Mods/JokerDisplayModSupport
 	url = https://github.com/nh6574/JokerDisplayModSupport/
-[submodule "Mods/Brainstorm"]
-	path = Mods/Brainstorm
-	url = https://github.com/Dimserene/Brainstorm
 [submodule "Mods/DebugPlus"]
 	path = Mods/DebugPlus
 	url = https://github.com/Dimserene/DebugPlus
