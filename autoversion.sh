@@ -34,11 +34,23 @@ generate_new_version_string() {
 # Get the name of the current working folder
 working_folder_name=$(basename "$PWD")
 
+echo ""
+echo "Start updating ${working_folder_name}..."
+echo ""
+
 # Pull the latest changes from the remote repository
 git pull
 
 # Update all submodules to their latest commit from the remote repository and merge them
 git submodule update --remote --recursive --merge
+
+# Check if there are any changes staged or in the working directory
+status_output=$(git status --porcelain | grep -v "README.md")
+
+if [ -z "$status_output" ]; then
+    echo "No changes detected after pull and submodule update. Exiting..."
+    exit 0
+fi
 
 # Generate a new version string based on the latest commit and current date
 new_version_string=$(generate_new_version_string)
@@ -65,4 +77,5 @@ git add .
 # Commit the staged changes using the content of CurrentVersion.txt as the commit message
 git commit -F Mods/ModpackUtil/CurrentVersion.txt
 
+# Push the changes to the remote repository
 git push
