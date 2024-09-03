@@ -56,14 +56,14 @@ else
     submodule_status="FAILED"
 fi
 
-# Step 3: Check if there are any changes in the "Mods" folder
+# Step 3: Check if there are any changes in the "Mods" folder, excluding README.md files
 status_output=$(git status --porcelain Mods/ | grep -v "README.md")
 
 # Variable to track if version was bumped
 version_bumped=false
 
 if [ -n "$status_output" ]; then
-    # If changes are detected in the Mods folder, generate a new version string
+    # If changes are detected in the Mods folder (excluding README.md), generate a new version string
     new_version_string=$(generate_new_version_string)
     echo "Step 4: Generated new version string: $new_version_string"
 
@@ -86,7 +86,7 @@ if [ -n "$status_output" ]; then
         copy_version_status="FAILED"
     fi
 else
-    echo "No changes detected in the Mods folder. Skipping version bump."
+    echo "No relevant changes detected in the Mods folder. Skipping version bump."
     update_version_status="SKIPPED"
     copy_version_status="SKIPPED"
 fi
