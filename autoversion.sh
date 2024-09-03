@@ -56,78 +56,80 @@ else
     submodule_status="FAILED"
 fi
 
-# Step 3: Check if there are any changes staged or in the working directory
-status_output=$(git status --porcelain | grep -v "README.md")
+# Step 3: Check if there are any changes in the "Mods" folder
+status_output=$(git status --porcelain Mods/ | grep -v "README.md")
 
-if [ -z "$status_output" ]; then
-    echo "No changes detected after pull and submodule update. Exiting..."
-    exit 0
-fi
+# Variable to track if version was bumped
+version_bumped=false
 
-# Step 4: Generate a new version string based on the latest commit and current date
-new_version_string=$(generate_new_version_string)
-echo "Step 4: Generated new version string: $new_version_string"
+if [ -n "$status_output" ]; then
+    # If changes are detected in the Mods folder, generate a new version string
+    new_version_string=$(generate_new_version_string)
+    echo "Step 4: Generated new version string: $new_version_string"
 
-# Step 5: Read the current version from the CurrentVersion.txt file, if it exists
-old_version_string=""
-if [ -f "./CurrentVersion.txt" ]; then
-    old_version_string=$(cat ./CurrentVersion.txt)
-    echo "Step 5: Read old version string: $old_version_string"
+    # Step 5: Update the CurrentVersion.txt file with the new version string
+    if echo "$new_version_string" > ./CurrentVersion.txt; then
+        echo "Step 5: New version string written to CurrentVersion.txt"
+        update_version_status="SUCCESS"
+        version_bumped=true
+    else
+        echo "Step 5: Failed to write new version string to CurrentVersion.txt"
+        update_version_status="FAILED"
+    fi
+
+    # Step 6: Copy the updated CurrentVersion.txt file to the Mods/ModpackUtil/ directory
+    if cp ./CurrentVersion.txt ./Mods/ModpackUtil/; then
+        echo "Step 6: CurrentVersion.txt copied to Mods/ModpackUtil/"
+        copy_version_status="SUCCESS"
+    else
+        echo "Step 6: Failed to copy CurrentVersion.txt to Mods/ModpackUtil/"
+        copy_version_status="FAILED"
+    fi
 else
-    echo "Step 5: No previous version found. This is the first version."
+    echo "No changes detected in the Mods folder. Skipping version bump."
+    update_version_status="SKIPPED"
+    copy_version_status="SKIPPED"
 fi
 
-# Step 6: Update the CurrentVersion.txt file with the new version string
-if echo "$new_version_string" > ./CurrentVersion.txt; then
-    echo "Step 6: New version string written to CurrentVersion.txt"
-    update_version_status="SUCCESS"
-else
-    echo "Step 6: Failed to write new version string to CurrentVersion.txt"
-    update_version_status="FAILED"
-fi
-
-# Step 7: Copy the updated CurrentVersion.txt file to the Mods/ModpackUtil/ directory
-if cp ./CurrentVersion.txt ./Mods/ModpackUtil/; then
-    echo "Step 7: CurrentVersion.txt copied to Mods/ModpackUtil/"
-    copy_version_status="SUCCESS"
-else
-    echo "Step 7: Failed to copy CurrentVersion.txt to Mods/ModpackUtil/"
-    copy_version_status="FAILED"
-fi
-
-# Step 8: Write the current UTC date and time to VersionTime.txt in the Mods/ModpackUtil/ directory
+# Step 7: Write the current UTC date and time to VersionTime.txt in the Mods/ModpackUtil/ directory
 if date -u "+%Y/%m/%d %H:%M:%S" > Mods/ModpackUtil/VersionTime.txt; then
-    echo "Step 8: VersionTime.txt updated successfully."
+    echo "Step 7: VersionTime.txt updated successfully."
     update_time_status="SUCCESS"
 else
-    echo "Step 8: Failed to update VersionTime.txt."
+    echo "Step 7: Failed to update VersionTime.txt."
     update_time_status="FAILED"
 fi
 
-# Step 9: Stage all changes in the current directory for commit
+# Step 8: Stage all changes in the current directory for commit
 if git add .; then
-    echo "Step 9: Changes staged successfully."
+    echo "Step 8: Changes staged successfully."
     stage_status="SUCCESS"
 else
-    echo "Step 9: Failed to stage changes."
+    echo "Step 8: Failed to stage changes."
     stage_status="FAILED"
 fi
 
-# Step 10: Commit the staged changes using the content of CurrentVersion.txt as the commit message
-if git commit -F Mods/ModpackUtil/CurrentVersion.txt; then
-    echo "Step 10: Changes committed successfully."
+# Step 9: Commit the staged changes
+if [ -f "./CurrentVersion.txt" ]; then
+    commit_message=$(cat ./CurrentVersion.txt)
+else
+    commit_message="Update without version bump"
+fi
+
+if git commit -m "$commit_message"; then
+    echo "Step 9: Changes committed successfully."
     commit_status="SUCCESS"
 else
-    echo "Step 10: Failed to commit changes."
+    echo "Step 9: Failed to commit changes."
     commit_status="FAILED"
 fi
 
-# Step 11: Push the changes to the remote repository
+# Step 10: Push the changes to the remote repository
 if git push; then
-    echo "Step 11: Changes pushed to remote repository successfully."
+    echo "Step 10: Changes pushed to remote repository successfully."
     push_status="SUCCESS"
 else
-    echo "Step 11: Failed to push changes to remote repository."
+    echo "Step 10: Failed to push changes to remote repository."
     push_status="FAILED"
 fi
 
@@ -135,18 +137,28 @@ fi
 echo ""
 echo "Update Summary for ${working_folder_name}:"
 echo "------------------------------------------"
-echo "Step 1: Pull status: $pull_status"
-echo "Step 2: Submodule update status: $submodule_status"
-echo "Step 6: Version update status: $update_version_status"
-echo "Step 7: Copy version file status: $copy_version_status"
-echo "Step 8: Update version time status: $update_time_status"
-echo "Step 9: Stage changes status: $stage_status"
-echo "Step 10: Commit status: $commit_status"
-echo "Step 11: Push status: $push_status"
+if [ "$update_version_status" = "SUCCESS" ] || [ "$update_version_status" = "SKIPPED" ]; then
+    echo "${working_folder_name}: SUCCESSFULLY UPDATED"
+else
+    echo "${working_folder_name}: FAILED TO UPDATE"
+    [ "$update_version_status" != "SUCCESS" ] && [ "$update_version_status" != "SKIPPED" ] && echo "  - Failed to update version"
+    [ "$copy_version_status" != "SUCCESS" ] && [ "$copy_version_status" != "SKIPPED" ] && echo "  - Failed to copy version file"
+    [ "$update_time_status" != "SUCCESS" ] && echo "  - Failed to update version time"
+    [ "$stage_status" != "SUCCESS" ] && echo "  - Failed to stage changes"
+    [ "$commit_status" != "SUCCESS" ] && echo "  - Failed to commit changes"
+    [ "$push_status" != "SUCCESS" ] && echo "  - Failed to push changes"
+fi
 echo "------------------------------------------"
 
 # Exit with appropriate status
-if [[ "$pull_status" == "SUCCESS" && "$submodule_status" == "SUCCESS" && "$update_version_status" == "SUCCESS" && "$copy_version_status" == "SUCCESS" && "$update_time_status" == "SUCCESS" && "$stage_status" == "SUCCESS" && "$commit_status" == "SUCCESS" && "$push_status" == "SUCCESS" ]]; then
+if [ "$pull_status" = "SUCCESS" ] && \
+   [ "$submodule_status" = "SUCCESS" ] && \
+   ([ "$update_version_status" = "SUCCESS" ] || [ "$update_version_status" = "SKIPPED" ]) && \
+   ([ "$copy_version_status" = "SUCCESS" ] || [ "$copy_version_status" = "SKIPPED" ]) && \
+   [ "$update_time_status" = "SUCCESS" ] && \
+   [ "$stage_status" = "SUCCESS" ] && \
+   [ "$commit_status" = "SUCCESS" ] && \
+   [ "$push_status" = "SUCCESS" ]; then
     exit 0
 else
     exit 1
