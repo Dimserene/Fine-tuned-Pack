@@ -10,9 +10,6 @@
 [submodule "Mods/Trance"]
 	path = Mods/Trance
 	url = https://github.com/Dimserene/Trance
-[submodule "Mods/BossJokers"]
-	path = Mods/BossJokers
-	url = https://github.com/KilledByLava/BossJokers
 [submodule "Mods/Jimbo-s-Pack"]
 	path = Mods/Jimbo-s-Pack
 	url = https://github.com/art-muncher/Jimbo-s-Pack
@@ -71,9 +68,6 @@
 [submodule "Mods/Joker-Evolution"]
 	path = Mods/Joker-Evolution
 	url = https://github.com/SDM0/Joker-Evolution
-[submodule "Mods/Bird-Jokers"]
-	path = Mods/Bird-Jokers
-	url = https://github.com/JustinBanzon/Bird-Jokers
 [submodule "Mods/Snow-s-Mods"]
 	path = Mods/Snow-s-Mods
 	url = https://github.com/RattlingSnow353/Snow-s-Mods
