@@ -47,9 +47,6 @@
 [submodule "Mods/Cartomancer"]
 	path = Mods/Cartomancer
 	url = https://github.com/stupxd/Cartomancer
-[submodule "Mods/KCVanilla"]
-	path = Mods/KCVanilla
-	url = https://github.com/kcgidw/kcvanilla
 [submodule "Mods/MoreJokerPacks"]
 	path = Mods/MoreJokerPacks
 	url = https://github.com/Samario1/MoreJokerPacks
