@@ -113,3 +113,6 @@
 [submodule "Mods/MathBlinds"]
 	path = Mods/MathBlinds
 	url = https://github.com/Bazinga9000/MathBlinds
+[submodule "Mods/KCVanilla"]
+	path = Mods/KCVanilla
+	url = https://github.com/kcgidw/kcvanilla
