@@ -116,3 +116,6 @@
 [submodule "Mods/KCVanilla"]
 	path = Mods/KCVanilla
 	url = https://github.com/kcgidw/kcvanilla
+[submodule "Mods/DeckSkinsPlus"]
+	path = Mods/DeckSkinsPlus
+	url = https://github.com/Dimserene/DeckSkinsPlus.git
