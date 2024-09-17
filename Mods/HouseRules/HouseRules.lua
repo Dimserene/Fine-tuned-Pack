@@ -430,10 +430,9 @@ function CardArea.emplace(self, card, location, stay_flipped)
 end
 
 local function galdur_page()
-    Galdur.generate_deck_preview()
-    Galdur.populate_deck_preview(Galdur.run_setup.choices.deck, true)
-    Galdur.generate_chip_tower()
-    Galdur.populate_chip_tower(Galdur.run_setup.choices.stake, true)
+    Galdur.include_deck_preview()
+    Galdur.include_chip_tower()
+
 
     local page_options = {
         "Basic",
