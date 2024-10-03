@@ -56,9 +56,6 @@
 [submodule "Mods/SDM_0-s-Stuff"]
 	path = Mods/SDM_0-s-Stuff
 	url = https://github.com/SDM0/SDM_0-s-Stuff
-[submodule "Mods/PampaJokerPack"]
-	path = Mods/PampaJokerPack
-	url = https://github.com/Dimserene/PampaJokerPack
 [submodule "Mods/Joker-Evolution"]
 	path = Mods/Joker-Evolution
 	url = https://github.com/SDM0/Joker-Evolution
@@ -119,9 +116,6 @@
 [submodule "Mods/DeckSkinsPlus"]
 	path = Mods/DeckSkinsPlus
 	url = https://github.com/Dimserene/DeckSkinsPlus.git
-[submodule "Mods/CheesyJokers"]
-	path = Mods/CheesyJokers
-	url = https://github.com/ilikecheese0/CheesyJokers
 [submodule "Mods/Flower-Pot"]
 	path = Mods/Flower-Pot
 	url = https://github.com/GauntletGames-2086/Flower-Pot
@@ -131,3 +125,6 @@
 [submodule "Mods/Aure-Spectral"]
 	path = Mods/Aure-Spectral
 	url = https://github.com/SDM0/Aure-Spectral
+[submodule "Mods/PampaJokerPack"]
+	path = Mods/PampaJokerPack
+	url = https://github.com/lshtech/balatro-pampa-joker-pack
