@@ -128,3 +128,6 @@
 [submodule "Mods/PampaJokerPack"]
 	path = Mods/PampaJokerPack
 	url = https://github.com/lshtech/balatro-pampa-joker-pack
+[submodule "Mods/TooManyJokers"]
+	path = Mods/TooManyJokers
+	url = https://github.com/cg-223/toomanyjokers
