@@ -131,3 +131,12 @@
 [submodule "Mods/TooManyJokers"]
 	path = Mods/TooManyJokers
 	url = https://github.com/cg-223/toomanyjokers
+[submodule "Mods/No-Laughing-Matter"]
+	path = Mods/No-Laughing-Matter
+	url = https://github.com/Minirebel/no-laughing-matter
+[submodule "Mods/MoreFluff"]
+	path = Mods/MoreFluff
+	url = https://github.com/notmario/MoreFluff
+[submodule "Mods/LushMod"]
+	path = Mods/LushMod
+	url = https://github.com/lshtech/LushMod
