@@ -140,3 +140,6 @@
 [submodule "Mods/LushMod"]
 	path = Mods/LushMod
 	url = https://github.com/lshtech/LushMod
+[submodule "Mods/HandPreview"]
+	path = Mods/HandPreview
+	url = https://github.com/lshtech/Balatro-HandPreview
