@@ -7,9 +7,6 @@
 [submodule "Mods/JokerSellValue"]
 	path = Mods/JokerSellValue
 	url = https://github.com/OppositeWolf770/JokerSellValue
-[submodule "Mods/Trance"]
-	path = Mods/Trance
-	url = https://github.com/Dimserene/Trance
 [submodule "Mods/Jimbo-s-Pack"]
 	path = Mods/Jimbo-s-Pack
 	url = https://github.com/art-muncher/Jimbo-s-Pack
@@ -146,3 +143,6 @@
 [submodule "Mods/LunasBalatroMods"]
 	path = Mods/LunasBalatroMods
 	url = https://github.com/LunaAstraCassiopeia/LunasBalatroMods
+[submodule "Mods/Trance"]
+	path = Mods/Trance
+	url = https://github.com/MathIsFun0/Trance
