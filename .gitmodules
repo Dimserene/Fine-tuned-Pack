@@ -32,9 +32,6 @@
 [submodule "Mods/DebugPlus"]
 	path = Mods/DebugPlus
 	url = https://github.com/Dimserene/DebugPlus
-[submodule "Mods/FoldButton"]
-	path = Mods/FoldButton
-	url = https://github.com/happinyz/BalatroFoldButton
 [submodule "Mods/NotJustYet"]
 	path = Mods/NotJustYet
 	url = https://github.com/Toneblock/balatro-NotJustYet
@@ -146,3 +143,12 @@
 [submodule "Mods/Trance"]
 	path = Mods/Trance
 	url = https://github.com/MathIsFun0/Trance
+[submodule "Mods/ModPackFixes"]
+	path = Mods/ModPackFixes
+	url = https://github.com/lshtech/ModPackFixes
+[submodule "Mods/HeyListen"]
+	path = Mods/HeyListen
+	url = https://github.com/SleepyG11/HeyListenBalatro
+[submodule "Mods/DiscoveryManager"]
+	path = Mods/DiscoveryManager
+	url = https://github.com/lshtech/DiscoveryManager

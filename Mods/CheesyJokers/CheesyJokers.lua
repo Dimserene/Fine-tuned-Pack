@@ -1064,7 +1064,7 @@ function SMODS.INIT.CheesyJokers()
         if context.discard then
             if pseudorandom('balloon') < G.GAME.probabilities.normal / self.ability.extra.odds then
                 local card = context.other_card
-                local suit = string.sub(card.base.suit, 1, 1)
+                local suit = SMODS.Suits[_card.base.suit].card_key
                 local rank = card.base.id == 14 and 2 or math.min(card.base.id + 1, 14)
                 if rank < 10 then rank = tostring(rank)
                 elseif rank == 10 then rank = 'T'
