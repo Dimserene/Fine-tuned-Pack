@@ -13,9 +13,6 @@
 [submodule "Mods/MystBlinds"]
 	path = Mods/MystBlinds
 	url = https://github.com/Mysthaps/MystBlinds
-[submodule "Mods/The-World-Ends-With-Jimbo"]
-	path = Mods/The-World-Ends-With-Jimbo
-	url = https://github.com/parchmentEngineer/The-World-Ends-With-Jimbo
 [submodule "Mods/Steamodded"]
 	path = Mods/Steamodded
 	url = https://github.com/Steamopollys/Steamodded
@@ -80,9 +77,6 @@
 [submodule "Mods/Galdur"]
 	path = Mods/Galdur
 	url = https://github.com/Eremel/Galdur/
-[submodule "Mods/Alices_Annum"]
-	path = Mods/Alices_Annum
-	url = https://github.com/ThreeCubed273/alices_annum_balatro_mod
 [submodule "Mods/BBBalatro"]
 	path = Mods/BBBalatro
 	url = https://github.com/BBBalatroMod/BBBalatro
@@ -152,3 +146,9 @@
 [submodule "Mods/DiscoveryManager"]
 	path = Mods/DiscoveryManager
 	url = https://github.com/lshtech/DiscoveryManager
+[submodule "Mods/The-World-Ends-With-Jimbo"]
+	path = Mods/The-World-Ends-With-Jimbo
+	url = https://github.com/Dimserene/The-World-Ends-With-Jimbo
+[submodule "Mods/Alices_Annum"]
+	path = Mods/Alices_Annum
+	url = https://github.com/Dimserene/alices_annum_balatro_mod
