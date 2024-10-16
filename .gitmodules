@@ -145,3 +145,6 @@
 [submodule "Mods/Alices_Annum"]
 	path = Mods/Alices_Annum
 	url = https://github.com/Dimserene/alices_annum_balatro_mod
+[submodule "Mods/Blueprint"]
+	path = Mods/Blueprint
+	url = https://github.com/stupxd/Blueprint
