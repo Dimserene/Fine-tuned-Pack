@@ -49,5 +49,29 @@ function Game:main_menu(change_context)
 	})
 end
 
+function Game:splash_screen()
+    splash_screenRef(self)
+
+    SMODS.current_mod = mod
+   
+    if (SMODS.Mods["Bunco"] or {}).can_load then
+        for i = #G.P_CENTER_POOLS["Booster"], 1, -1 do
+            local entry = G.P_CENTER_POOLS["Booster"][i]
+            if string.find(entry.key, "p_bunc_virtual") then
+                table.remove(G.P_CENTER_POOLS["Booster"], i)
+            end
+        end
+    end
+
+	if (SMODS.Mods["Oiimanaddition"] or {}).can_load
+		for i = #G.P_CENTER_POOLS["Booster"], 1, -1 do
+			local entry = G.P_CENTER_POOLS["Booster"][i]
+			if string.find(entry.key, "p_oiim_conditional") then
+				table.remove(G.P_CENTER_POOLS["Booster"], i)
+			end
+		end
+	end
+end
+
 ----------------------------------------------
 ------------MOD CODE END----------------------
