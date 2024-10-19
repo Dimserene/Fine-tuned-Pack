@@ -63,7 +63,7 @@ function Game:splash_screen()
         end
     end
 
-	if (SMODS.Mods["Oiimanaddition"] or {}).can_load
+	if (SMODS.Mods["Oiimanaddition"] or {}).can_load then
 		for i = #G.P_CENTER_POOLS["Booster"], 1, -1 do
 			local entry = G.P_CENTER_POOLS["Booster"][i]
 			if string.find(entry.key, "p_oiim_conditional") then
