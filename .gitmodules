@@ -7,9 +7,6 @@
 [submodule "Mods/JokerSellValue"]
 	path = Mods/JokerSellValue
 	url = https://github.com/OppositeWolf770/JokerSellValue
-[submodule "Mods/Jimbo-s-Pack"]
-	path = Mods/Jimbo-s-Pack
-	url = https://github.com/art-muncher/Jimbo-s-Pack
 [submodule "Mods/MystBlinds"]
 	path = Mods/MystBlinds
 	url = https://github.com/Mysthaps/MystBlinds
