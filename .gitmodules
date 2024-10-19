@@ -55,9 +55,6 @@
 [submodule "Mods/JankJonklers"]
 	path = Mods/JankJonklers
 	url = https://github.com/Dimserene/JankJonklers
-[submodule "Mods/SpicyJokers"]
-	path = Mods/SpicyJokers
-	url = https://github.com/Dimserene/SpicyJokers
 [submodule "Mods/ModpackDecks"]
 	path = Mods/ModpackDecks
 	url = https://github.com/Dimserene/ModpackDecks
@@ -148,3 +145,6 @@
 [submodule "Mods/Blueprint"]
 	path = Mods/Blueprint
 	url = https://github.com/stupxd/Blueprint
+[submodule "Mods/SpicyJokers"]
+	path = Mods/SpicyJokers
+	url = https://github.com/lshtech/SpicyJokers
