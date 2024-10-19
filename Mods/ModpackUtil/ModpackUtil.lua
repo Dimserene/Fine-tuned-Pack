@@ -10,6 +10,7 @@
 
 local lovely = require("lovely")
 local nativefs = require("nativefs")
+local splash_screenRef = Game.splash_screen
 
 if SMODS.Atlas then
   SMODS.Atlas({
