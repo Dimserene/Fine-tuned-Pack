@@ -19,9 +19,6 @@
 [submodule "Mods/DebugPlus"]
 	path = Mods/DebugPlus
 	url = https://github.com/Dimserene/DebugPlus
-[submodule "Mods/NotJustYet"]
-	path = Mods/NotJustYet
-	url = https://github.com/Toneblock/balatro-NotJustYet
 [submodule "Mods/BalatroSafety"]
 	path = Mods/BalatroSafety
 	url = https://github.com/Zei33/balatro-safety-steamodded
@@ -133,9 +130,6 @@
 [submodule "Mods/The-World-Ends-With-Jimbo"]
 	path = Mods/The-World-Ends-With-Jimbo
 	url = https://github.com/Dimserene/The-World-Ends-With-Jimbo
-[submodule "Mods/Alices_Annum"]
-	path = Mods/Alices_Annum
-	url = https://github.com/Dimserene/alices_annum_balatro_mod
 [submodule "Mods/Blueprint"]
 	path = Mods/Blueprint
 	url = https://github.com/stupxd/Blueprint
