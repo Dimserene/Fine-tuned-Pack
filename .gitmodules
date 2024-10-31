@@ -91,9 +91,6 @@
 [submodule "Mods/Talisman"]
 	path = Mods/Talisman
 	url = https://github.com/Dimserene/Talisman
-[submodule "Mods/Aure-Spectral"]
-	path = Mods/Aure-Spectral
-	url = https://github.com/SDM0/Aure-Spectral
 [submodule "Mods/PampaJokerPack"]
 	path = Mods/PampaJokerPack
 	url = https://github.com/lshtech/balatro-pampa-joker-pack
@@ -112,9 +109,6 @@
 [submodule "Mods/HandPreview"]
 	path = Mods/HandPreview
 	url = https://github.com/lshtech/Balatro-HandPreview
-[submodule "Mods/LunasBalatroMods"]
-	path = Mods/LunasBalatroMods
-	url = https://github.com/LunaAstraCassiopeia/LunasBalatroMods
 [submodule "Mods/Trance"]
 	path = Mods/Trance
 	url = https://github.com/MathIsFun0/Trance
@@ -139,3 +133,18 @@
 [submodule "Mods/JankJonklers"]
 	path = Mods/JankJonklers
 	url = https://github.com/spikeof2010/JankJonklers
+[submodule "Mods/Malverk"]
+	path = Mods/Malverk
+	url = https://github.com/Eremel/Malverk
+[submodule "Mods/Potatro"]
+	path = Mods/Potatro
+	url = https://github.com/balt-dev/potatro/
+[submodule "Mods/LunasBalatroMods"]
+	path = Mods/LunasBalatroMods
+	url = https://github.com/Dimserene/LunasBalatroMods
+[submodule "Mods/Luna-s-Enhancements"]
+	path = Mods/Luna-s-Enhancements
+	url = https://github.com/Eremel/Luna-s-Enhancements/
+[submodule "Mods/Aure-Spectral"]
+	path = Mods/Aure-Spectral
+	url = https://github.com/Eremel/Aure-Spectral/
