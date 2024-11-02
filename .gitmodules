@@ -1,6 +1,3 @@
-[submodule "Mods/Aura"]
-	path = Mods/Aura
-	url = https://github.com/MathIsFun0/Aura
 [submodule "Mods/JokerDisplay"]
 	path = Mods/JokerDisplay
 	url = https://github.com/nh6574/JokerDisplay
@@ -82,9 +79,6 @@
 [submodule "Mods/KCVanilla"]
 	path = Mods/KCVanilla
 	url = https://github.com/kcgidw/kcvanilla
-[submodule "Mods/DeckSkinsPlus"]
-	path = Mods/DeckSkinsPlus
-	url = https://github.com/Dimserene/DeckSkinsPlus.git
 [submodule "Mods/Flower-Pot"]
 	path = Mods/Flower-Pot
 	url = https://github.com/GauntletGames-2086/Flower-Pot
