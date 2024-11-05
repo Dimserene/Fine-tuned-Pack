@@ -142,3 +142,48 @@
 [submodule "Mods/Aure-Spectral"]
 	path = Mods/Aure-Spectral
 	url = https://github.com/Eremel/Aure-Spectral/
+[submodule "Mods/5CEBalatro"]
+	path = Mods/5CEBalatro
+	url = https://github.com/lshtech/5CEBalatro
+[submodule "Mods/Buffoonery"]
+	path = Mods/Buffoonery
+	url = https://github.com/pinkmaggit-hub/Buffoonery/
+[submodule "Mods/FloundersJokers"]
+	path = Mods/FloundersJokers
+	url = https://github.com/Flounderlul/FloundersJokers
+[submodule "Mods/JestersPrivilege"]
+	path = Mods/JestersPrivilege
+	url = https://github.com/unethikeele/JestersPrivilege
+[submodule "Mods/Jimbo-s-Pack"]
+	path = Mods/Jimbo-s-Pack
+	url = https://github.com/art-muncher/Jimbo-s-Pack
+[submodule "Mods/Matchbox"]
+	path = Mods/Matchbox
+	url = https://github.com/lshtech/Matchbox
+[submodule "Mods/MOARJokers"]
+	path = Mods/MOARJokers
+	url = https://github.com/MrSmoothieHuman1/MOARJokers
+[submodule "Mods/Multi-Jokers"]
+	path = Mods/Multi-Jokers
+	url = https://github.com/lshtech/multi-jokers
+[submodule "Mods/MystesOpenJokers"]
+	path = Mods/MystesOpenJokers
+	url = https://github.com/lshtech/MystesOpenJokers
+[submodule "Mods/Ortalab-Demo"]
+	path = Mods/Ortalab-Demo
+	url = https://github.com/Eremel/Ortalab-Demo
+[submodule "Mods/Reverie"]
+	path = Mods/Reverie
+	url = https://github.com/dvrp0/reverie
+[submodule "Mods/Taikomochi"]
+	path = Mods/Taikomochi
+	url = https://github.com/Amvoled/Taikomochi
+[submodule "Mods/Tetrapak"]
+	path = Mods/Tetrapak
+	url = https://github.com/lshtech/Tetrapak
+[submodule "Mods/The-Buffoon-Pack"]
+	path = Mods/The-Buffoon-Pack
+	url = https://github.com/lshtech/The-Buffoon-Pack
+[submodule "Mods/DreadJokers"]
+	path = Mods/DreadJokers
+	url = https://github.com/LunaAstraCassiopeia/DreadJokers
