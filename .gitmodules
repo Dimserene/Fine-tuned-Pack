@@ -154,9 +154,6 @@
 [submodule "Mods/JestersPrivilege"]
 	path = Mods/JestersPrivilege
 	url = https://github.com/unethikeele/JestersPrivilege
-[submodule "Mods/Jimbo-s-Pack"]
-	path = Mods/Jimbo-s-Pack
-	url = https://github.com/art-muncher/Jimbo-s-Pack
 [submodule "Mods/Matchbox"]
 	path = Mods/Matchbox
 	url = https://github.com/lshtech/Matchbox
