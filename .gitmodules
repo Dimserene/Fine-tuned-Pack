@@ -172,3 +172,6 @@
 [submodule "Mods/Aure-Spectral"]
 	path = Mods/Aure-Spectral
 	url = https://github.com/SDM0/Aure-Spectral
+[submodule "Mods/CheesyJokers"]
+	path = Mods/CheesyJokers
+	url = https://github.com/lshtech/CheesyJokers
