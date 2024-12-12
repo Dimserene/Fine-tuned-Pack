@@ -127,9 +127,6 @@
 [submodule "Mods/Potatro"]
 	path = Mods/Potatro
 	url = https://github.com/balt-dev/potatro/
-[submodule "Mods/Aure-Spectral"]
-	path = Mods/Aure-Spectral
-	url = https://github.com/Eremel/Aure-Spectral/
 [submodule "Mods/5CEBalatro"]
 	path = Mods/5CEBalatro
 	url = https://github.com/lshtech/5CEBalatro
