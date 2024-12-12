@@ -169,3 +169,6 @@
 [submodule "Mods/LunasBalatroMods"]
 	path = Mods/LunasBalatroMods
 	url = https://github.com/LunaAstraCassiopeia/LunasBalatroMods
+[submodule "Mods/Aure-Spectral"]
+	path = Mods/Aure-Spectral
+	url = https://github.com/SDM0/Aure-Spectral
