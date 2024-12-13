@@ -10,9 +10,6 @@
 [submodule "Mods/Steamodded"]
 	path = Mods/Steamodded
 	url = https://github.com/Steamopollys/Steamodded
-[submodule "Mods/DebugPlus"]
-	path = Mods/DebugPlus
-	url = https://github.com/Dimserene/DebugPlus
 [submodule "Mods/BalatroSafety"]
 	path = Mods/BalatroSafety
 	url = https://github.com/Zei33/balatro-safety-steamodded
@@ -55,9 +52,6 @@
 [submodule "Mods/BBBalatro"]
 	path = Mods/BBBalatro
 	url = https://github.com/BBBalatroMod/BBBalatro
-[submodule "Mods/Bunco"]
-	path = Mods/Bunco
-	url = https://github.com/Dimserene/Bunco
 [submodule "Mods/Balatro-Jokers-Plus"]
 	path = Mods/Balatro-Jokers-Plus
 	url = https://github.com/KaviD-115/Balatro-Jokers-Plus
@@ -175,3 +169,9 @@
 [submodule "Mods/CheesyJokers"]
 	path = Mods/CheesyJokers
 	url = https://github.com/lshtech/CheesyJokers
+[submodule "Mods/DebugPlus"]
+	path = Mods/DebugPlus
+	url = https://github.com/WilsontheWolf/DebugPlus
+[submodule "Mods/Bunco"]
+	path = Mods/Bunco
+	url = https://github.com/Firch/Bunco
