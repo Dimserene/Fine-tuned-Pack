@@ -43,9 +43,6 @@
 [submodule "Mods/Paperback"]
 	path = Mods/Paperback
 	url = https://github.com/GitNether/Paperback
-[submodule "Mods/Handy"]
-	path = Mods/Handy
-	url = https://github.com/SleepyG11/HandyBalatro
 [submodule "Mods/Galdur"]
 	path = Mods/Galdur
 	url = https://github.com/Eremel/Galdur/
