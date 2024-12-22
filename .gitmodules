@@ -181,3 +181,6 @@
 [submodule "Mods/Handy"]
 	path = Mods/Handy
 	url = https://github.com/SleepyG11/HandyBalatro
+[submodule "Mods/Item-Remover"]
+	path = Mods/Item-Remover
+	url = https://github.com/art-muncher/Item-Remover
