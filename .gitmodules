@@ -184,3 +184,21 @@
 [submodule "Mods/Item-Remover"]
 	path = Mods/Item-Remover
 	url = https://github.com/art-muncher/Item-Remover
+[submodule "Mods/ExtendedBlueprint"]
+	path = Mods/ExtendedBlueprint
+	url = https://github.com/Toneblock/balatro-ExtendedBlueprint
+[submodule "Mods/Morjokers"]
+	path = Mods/Morjokers
+	url = https://github.com/morpline/morjokers
+[submodule "Mods/ExtraCredit"]
+	path = Mods/ExtraCredit
+	url = https://github.com/GuilloryCraft/ExtraCredit
+[submodule "Mods/Multipack"]
+	path = Mods/Multipack
+	url = https://github.com/snowylight/Multipack
+[submodule "Mods/Seven-Deadly-Sins"]
+	path = Mods/Seven-Deadly-Sins
+	url = https://github.com/lshtech/sevendeadlysins
+[submodule "Mods/SilverSeal"]
+	path = Mods/SilverSeal
+	url = https://github.com/lshtech/SilverSeal
