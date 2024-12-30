@@ -31,9 +31,6 @@
 [submodule "Mods/Snow-s-Mods"]
 	path = Mods/Snow-s-Mods
 	url = https://github.com/RattlingSnow353/Snow-s-Mods
-[submodule "Mods/Fusion-Jokers"]
-	path = Mods/Fusion-Jokers
-	url = https://github.com/Dimserene/Fusion-Jokers
 [submodule "Mods/Jestobiology"]
 	path = Mods/Jestobiology
 	url = https://github.com/spikeof2010/Jestobiology
@@ -199,3 +196,6 @@
 [submodule "Mods/SilverSeal"]
 	path = Mods/SilverSeal
 	url = https://github.com/lshtech/SilverSeal
+[submodule "Mods/Fusion-Jokers"]
+	path = Mods/Fusion-Jokers
+	url = https://github.com/lshtech/Fusion-Jokers
