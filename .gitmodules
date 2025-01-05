@@ -58,9 +58,6 @@
 [submodule "Mods/Bird-Jokers"]
 	path = Mods/Bird-Jokers
 	url = https://github.com/JustinBanzon/Bird-Jokers
-[submodule "Mods/MathBlinds"]
-	path = Mods/MathBlinds
-	url = https://github.com/Bazinga9000/MathBlinds
 [submodule "Mods/KCVanilla"]
 	path = Mods/KCVanilla
 	url = https://github.com/kcgidw/kcvanilla
@@ -139,9 +136,6 @@
 [submodule "Mods/Ortalab-Demo"]
 	path = Mods/Ortalab-Demo
 	url = https://github.com/Eremel/Ortalab-Demo
-[submodule "Mods/Reverie"]
-	path = Mods/Reverie
-	url = https://github.com/dvrp0/reverie
 [submodule "Mods/Taikomochi"]
 	path = Mods/Taikomochi
 	url = https://github.com/Amvoled/Taikomochi
@@ -199,3 +193,6 @@
 [submodule "Mods/Fusion-Jokers"]
 	path = Mods/Fusion-Jokers
 	url = https://github.com/lshtech/Fusion-Jokers
+[submodule "Mods/MathBlinds"]
+	path = Mods/MathBlinds
+	url = https://github.com/Dimserene/MathBlinds
