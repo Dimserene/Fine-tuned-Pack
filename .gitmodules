@@ -193,6 +193,3 @@
 [submodule "Mods/Fusion-Jokers"]
 	path = Mods/Fusion-Jokers
 	url = https://github.com/lshtech/Fusion-Jokers
-[submodule "Mods/MathBlinds"]
-	path = Mods/MathBlinds
-	url = https://github.com/Dimserene/MathBlinds
