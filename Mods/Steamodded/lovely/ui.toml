@@ -1,0 +1,213 @@
+[manifest]
+version = "1.0.0"
+dump_lua = true
+priority = -10
+
+### Addition Tab
+
+## Decks tab
+# create_UIBox_your_collection_decks()
+[[patches]]
+[patches.pattern]
+target = "functions/UI_definitions.lua"
+pattern = '''G.GAME.viewed_back = Back(G.P_CENTERS.b_red)'''
+position = "at"
+payload = '''
+local deck_pool = SMODS.collection_pool(G.P_CENTER_POOLS.Back)
+G.GAME.viewed_back = Back(G.ACTIVE_MOD_UI and deck_pool[1] or G.P_CENTERS.b_red)'''
+match_indent = true
+
+# create_UIBox_your_collection_decks()
+[[patches]]
+[patches.regex]
+target = 'functions/UI_definitions.lua'
+pattern = '''(?<indent>[\t ]*)for k, v in ipairs\(G\.P_CENTER_POOLS\.Back\) do\n[\s\S]{4}ordered_names\[#ordered_names\+1\] = v\.name\n[\s\S]{2}end'''
+position = 'at'
+payload = '''
+for k, v in ipairs(deck_pool) do
+    ordered_names[#ordered_names+1] = v.key
+end'''
+line_prepend = '$indent'
+
+# create_UIBox_your_collection_decks()
+[[patches]]
+[patches.pattern]
+target = "functions/UI_definitions.lua"
+pattern = '''local t = create_UIBox_generic_options({ back_func = 'your_collection', contents = {'''
+position = "at"
+payload = '''local t = create_UIBox_generic_options({ back_func = G.ACTIVE_MOD_UI and "openModUI_"..G.ACTIVE_MOD_UI.id or 'your_collection', contents = {'''
+match_indent = true
+
+# G.FUNCS.your_collection_deck_page
+[[patches]]
+[patches.pattern]
+target = "functions/button_callbacks.lua"
+pattern = '''G.GAME.viewed_back:change_to(G.P_CENTER_POOLS.Back[args.to_key])'''
+position = "at"
+payload = '''
+local deck_pool = SMODS.collection_pool(G.P_CENTER_POOLS.Back)
+G.GAME.viewed_back:change_to(deck_pool[args.to_key])'''
+match_indent = true
+
+# create_UIBox_your_collection()
+[[patches]]
+[patches.regex]
+target = 'functions/UI_definitions.lua'
+pattern = '''(?<indent>[\t ]*)UIBox_button\(\{button = 'your_collection_blinds', label = \{localize\('b_blinds'\)\}, count = G\.DISCOVER_TALLIES\.blinds, minw = 5, minh = 2.0, id = 'your_collection_blinds', focus_args = \{snap_to = true\}\}\),'''
+position = 'after'
+payload = '''UIBox_button({button = 'your_collection_other_gameobjects', label = {localize('k_other')}, minw = 5, id = 'your_collection_other_gameobjects', focus_args = {snap_to = true}}),'''
+
+# Fix UIElement.config.chosen being overriden if choice=true is set
+# UIElement:click()
+[[patches]]
+[patches.pattern]
+target = "engine/ui.lua"
+match_indent = true
+position = "after"
+pattern = "if self.config.choice then"
+payload = "    local chosen_temp = self.config.chosen"
+
+[[patches]]
+[patches.pattern]
+target = "engine/ui.lua"
+match_indent = true
+position = "at"
+pattern = "self.config.chosen = true"
+payload = "self.config.chosen = chosen_temp or true"
+
+# Escape from mod menu saves config
+# Needs to be before all checks
+[[patches]]
+[patches.pattern]
+target = 'engine/controller.lua'
+pattern = "function Controller:key_press_update(key, dt)"
+position = "after"
+payload = '''
+    if key == "escape" and G.ACTIVE_MOD_UI then
+        G.FUNCS.exit_mods()
+    end
+'''
+match_indent = true
+
+[[patches]]
+[patches.regex]
+target = 'functions/UI_definitions.lua'
+position = 'before'
+line_prepend = '$indent'
+pattern = '''
+(?<indent>[\t ]*)return \{n=G\.UIT\.ROOT, config = \{align = 'cm', colour = G\.C\.CLEAR\}, nodes=\{
+[\t ]*\{n=G\.UIT\.C,'''
+payload = '''
+local cols
+if #info_boxes <= 3 then
+    cols = 1
+elseif #info_boxes <= 10 then
+    cols = 2
+elseif #info_boxes <= 24 then
+    cols = 3
+else
+    cols = 4
+end
+local nodes_per_col = math.ceil(#info_boxes/cols)
+local info_cols = {}
+for i = 0, cols-1 do
+    local col = {}
+    for j = 1, nodes_per_col do
+        local info_box = info_boxes[i*nodes_per_col+j]
+        if info_box then
+            table.insert(col, info_box)
+        else break end
+    end
+    table.insert(info_cols, {n=G.UIT.C, config = {align="cm"}, nodes = col})
+end
+info_boxes = {{n=G.UIT.R, config = {align="cm", padding = 0.05, card_pos = card.T.x }, nodes = info_cols}}
+'''
+
+[[patches]]
+[patches.pattern]
+target = 'functions/button_callbacks.lua'
+match_indent = true
+position = 'at'
+pattern = "config = {offset = {x=-0.03,y=0}, align = 'cl', parent = e}"
+payload = """config = (not e.config.ref_table or not e.config.ref_table[1].config.card_pos or e.config.ref_table[1].config.card_pos > G.ROOM.T.w*0.4) and
+    {offset = {x=-0.03,y=0}, align = 'cl', parent = e} or
+    {offset = {x=0.03,y=0}, align = 'cr', parent = e}"""
+
+[[patches]]
+[patches.pattern]
+target = 'tag.lua'
+match_indent = true
+position = 'at'
+pattern = "_self.config.h_popup_config ={align = 'cl', offset = {x=-0.1,y=0},parent = _self}"
+payload = """_self.config.h_popup_config = (_self.T.x > G.ROOM.T.w*0.4) and
+    {align =  'cl', offset = {x=-0.1,y=0},parent = _self} or
+    {align =  'cr', offset = {x=0.1,y=0},parent = _self}"""
+    
+# desc_from_rows
+[[patches]]
+[patches.regex]
+target = 'functions/UI_definitions.lua'
+position = 'at'
+pattern = 'colour = empty and G\.C\.CLEAR or G\.C\.UI\.BACKGROUND_WHITE'
+payload = 'colour = desc_nodes.background_colour or empty and G.C.CLEAR or G.C.UI.BACKGROUND_WHITE'
+
+# info_tip_from_rows
+[[patches]]
+[patches.regex]
+target = 'functions/UI_definitions.lua'
+position = 'at'
+pattern = 'padding = 0\.05, colour = G\.C\.WHITE\}'
+payload = 'padding = 0.05, colour = desc_nodes.background_colour or G.C.WHITE}'
+
+# localize
+[[patches]]
+[patches.regex]
+target = 'functions/misc_functions.lua'
+position = 'after'
+pattern = '\(part\.control\.C and loc_colour\(part\.control\.C\)\)'
+payload = ' or args.text_colour'
+
+[[patches]]
+[patches.regex]
+target = 'functions/misc_functions.lua'
+position = 'at'
+pattern = 'loc_colour\(part\.control\.C or nil, args\.default_col\)'
+payload = 'not part.control.C and args.text_colour or loc_colour(part.control.C or nil, args.default_col)'
+
+[[patches]]
+[patches.regex]
+target = 'functions/misc_functions.lua'
+position = 'after'
+pattern = 'part\.control\.s and tonumber\(part\.control\.s\)'
+payload = ' or args.scale '
+
+# set_discover_tallies()
+# exclude no_collection objects
+[[patches]]
+[patches.pattern]
+target = 'functions/misc_functions.lua'
+match_indent = true
+position = 'at'
+pattern = "if not v.omit then"
+payload = "if not v.omit and not v.no_collection then"
+
+[[patches]]
+[patches.regex]
+target = 'functions/misc_functions.lua'
+line_prepend = '$indent'
+position = 'at'
+pattern = '(?<indent>[\t ]*)(?<start>for _, v in pairs\(G\.P_[BT].*)(?<rest>(\n.*){7})'
+payload = '''$start
+    if not v.no_collection then
+    $rest
+end
+'''
+
+#set_alerts()
+[[patches]]
+[patches.pattern]
+target = 'functions/common_events.lua'
+match_indent = true
+position = 'at'
+pattern = "if v.discovered and not v.alerted then"
+payload = "if v.discovered and not v.alerted and not v.no_collection then"
