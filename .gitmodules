@@ -115,9 +115,6 @@
 [submodule "Mods/Ortalab-Demo"]
 	path = Mods/Ortalab-Demo
 	url = https://github.com/Eremel/Ortalab-Demo
-[submodule "Mods/Taikomochi"]
-	path = Mods/Taikomochi
-	url = https://github.com/Amvoled/Taikomochi
 [submodule "Mods/Tetrapak"]
 	path = Mods/Tetrapak
 	url = https://github.com/lshtech/Tetrapak
@@ -172,3 +169,6 @@
 [submodule "Mods/ModPackFixes"]
 	path = Mods/ModPackFixes
 	url = https://github.com/lshtech/ModPackFixes
+[submodule "Mods/Taikomochi"]
+	path = Mods/Taikomochi
+	url = https://github.com/Amvoled/Taikomochi
