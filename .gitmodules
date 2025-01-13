@@ -1,9 +1,6 @@
 [submodule "Mods/JokerDisplay"]
 	path = Mods/JokerDisplay
 	url = https://github.com/nh6574/JokerDisplay
-[submodule "Mods/JokerSellValue"]
-	path = Mods/JokerSellValue
-	url = https://github.com/OppositeWolf770/JokerSellValue
 [submodule "Mods/MystBlinds"]
 	path = Mods/MystBlinds
 	url = https://github.com/Mysthaps/MystBlinds
