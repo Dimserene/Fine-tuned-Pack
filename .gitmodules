@@ -4,9 +4,6 @@
 [submodule "Mods/MystBlinds"]
 	path = Mods/MystBlinds
 	url = https://github.com/Mysthaps/MystBlinds
-[submodule "Mods/BalatroSafety"]
-	path = Mods/BalatroSafety
-	url = https://github.com/Zei33/balatro-safety-steamodded
 [submodule "Mods/Cartomancer"]
 	path = Mods/Cartomancer
 	url = https://github.com/stupxd/Cartomancer
