@@ -46,9 +46,6 @@
 [submodule "Mods/BossJokers"]
 	path = Mods/BossJokers
 	url = https://github.com/KilledByLava/BossJokers
-[submodule "Mods/Bird-Jokers"]
-	path = Mods/Bird-Jokers
-	url = https://github.com/JustinBanzon/Bird-Jokers
 [submodule "Mods/Flower-Pot"]
 	path = Mods/Flower-Pot
 	url = https://github.com/GauntletGames-2086/Flower-Pot
