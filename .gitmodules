@@ -70,9 +70,6 @@
 [submodule "Mods/DiscoveryManager"]
 	path = Mods/DiscoveryManager
 	url = https://github.com/lshtech/DiscoveryManager
-[submodule "Mods/The-World-Ends-With-Jimbo"]
-	path = Mods/The-World-Ends-With-Jimbo
-	url = https://github.com/Dimserene/The-World-Ends-With-Jimbo
 [submodule "Mods/Blueprint"]
 	path = Mods/Blueprint
 	url = https://github.com/stupxd/Blueprint
