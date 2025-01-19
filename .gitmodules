@@ -82,9 +82,6 @@
 [submodule "Mods/5CEBalatro"]
 	path = Mods/5CEBalatro
 	url = https://github.com/lshtech/5CEBalatro
-[submodule "Mods/FloundersJokers"]
-	path = Mods/FloundersJokers
-	url = https://github.com/Flounderlul/FloundersJokers
 [submodule "Mods/JestersPrivilege"]
 	path = Mods/JestersPrivilege
 	url = https://github.com/unethikeele/JestersPrivilege
@@ -139,9 +136,6 @@
 [submodule "Mods/ExtraCredit"]
 	path = Mods/ExtraCredit
 	url = https://github.com/GuilloryCraft/ExtraCredit
-[submodule "Mods/Multipack"]
-	path = Mods/Multipack
-	url = https://github.com/snowylight/Multipack
 [submodule "Mods/Seven-Deadly-Sins"]
 	path = Mods/Seven-Deadly-Sins
 	url = https://github.com/lshtech/sevendeadlysins
