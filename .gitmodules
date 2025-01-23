@@ -154,3 +154,21 @@
 [submodule "Mods/Taikomochi"]
 	path = Mods/Taikomochi
 	url = https://github.com/Amvoled/Taikomochi
+[submodule "Mods/Balatro-Draft"]
+	path = Mods/Balatro-Draft
+	url = https://github.com/spire-winder/Balatro-Draft
+[submodule "Mods/Cosmos"]
+	path = Mods/Cosmos
+	url = https://github.com/neatoqueen/Cosmos
+[submodule "Mods/Isaactro"]
+	path = Mods/Isaactro
+	url = https://github.com/WilliamFlinchbaugh/Isaactro
+[submodule "Mods/KCVanilla"]
+	path = Mods/KCVanilla
+	url = https://github.com/kcgidw/kcvanilla
+[submodule "Mods/TatteredDecks"]
+	path = Mods/TatteredDecks
+	url = https://github.com/Cheesy-Brik/TatteredDecks
+[submodule "Mods/Balatro451"]
+	path = Mods/Balatro451
+	url = https://github.com/SM451Modding/Balatro451/
