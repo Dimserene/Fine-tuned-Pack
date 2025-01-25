@@ -115,9 +115,6 @@
 [submodule "Mods/DebugPlus"]
 	path = Mods/DebugPlus
 	url = https://github.com/WilsontheWolf/DebugPlus
-[submodule "Mods/Bunco"]
-	path = Mods/Bunco
-	url = https://github.com/Firch/Bunco
 [submodule "Mods/FoldButton"]
 	path = Mods/FoldButton
 	url = https://github.com/happinyz/BalatroFoldButton
@@ -172,3 +169,6 @@
 [submodule "Mods/Balatro451"]
 	path = Mods/Balatro451
 	url = https://github.com/SM451Modding/Balatro451/
+[submodule "Mods/Bunco"]
+	path = Mods/Bunco
+	url = https://github.com/Dimserene/Bunco
