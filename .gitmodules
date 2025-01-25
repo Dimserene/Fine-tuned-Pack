@@ -172,3 +172,6 @@
 [submodule "Mods/Bunco"]
 	path = Mods/Bunco
 	url = https://github.com/Dimserene/Bunco
+[submodule "Mods/DeckSkinsLite"]
+	path = Mods/DeckSkinsLite
+	url = https://github.com/Dimserene/DeckSkinsLite
