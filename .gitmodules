@@ -127,18 +127,12 @@
 [submodule "Mods/ExtendedBlueprint"]
 	path = Mods/ExtendedBlueprint
 	url = https://github.com/Toneblock/balatro-ExtendedBlueprint
-[submodule "Mods/Morjokers"]
-	path = Mods/Morjokers
-	url = https://github.com/morpline/morjokers
 [submodule "Mods/ExtraCredit"]
 	path = Mods/ExtraCredit
 	url = https://github.com/GuilloryCraft/ExtraCredit
 [submodule "Mods/Seven-Deadly-Sins"]
 	path = Mods/Seven-Deadly-Sins
 	url = https://github.com/lshtech/sevendeadlysins
-[submodule "Mods/SilverSeal"]
-	path = Mods/SilverSeal
-	url = https://github.com/lshtech/SilverSeal
 [submodule "Mods/Fusion-Jokers"]
 	path = Mods/Fusion-Jokers
 	url = https://github.com/lshtech/Fusion-Jokers
