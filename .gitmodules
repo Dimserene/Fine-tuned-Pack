@@ -100,9 +100,6 @@
 [submodule "Mods/Ortalab-Demo"]
 	path = Mods/Ortalab-Demo
 	url = https://github.com/Eremel/Ortalab-Demo
-[submodule "Mods/Tetrapak"]
-	path = Mods/Tetrapak
-	url = https://github.com/lshtech/Tetrapak
 [submodule "Mods/The-Buffoon-Pack"]
 	path = Mods/The-Buffoon-Pack
 	url = https://github.com/lshtech/The-Buffoon-Pack
