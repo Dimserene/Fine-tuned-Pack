@@ -85,9 +85,6 @@
 [submodule "Mods/JestersPrivilege"]
 	path = Mods/JestersPrivilege
 	url = https://github.com/unethikeele/JestersPrivilege
-[submodule "Mods/Matchbox"]
-	path = Mods/Matchbox
-	url = https://github.com/lshtech/Matchbox
 [submodule "Mods/MOARJokers"]
 	path = Mods/MOARJokers
 	url = https://github.com/MrSmoothieHuman1/MOARJokers
