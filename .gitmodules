@@ -160,3 +160,6 @@
 [submodule "Mods/DeckSkinsLite"]
 	path = Mods/DeckSkinsLite
 	url = https://github.com/Dimserene/DeckSkinsLite
+[submodule "Mods/FlushHotkeys"]
+	path = Mods/FlushHotkeys
+	url = https://github.com/Dimserene/FlushHotkeys
