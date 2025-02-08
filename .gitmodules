@@ -19,9 +19,6 @@
 [submodule "Mods/Joker-Evolution"]
 	path = Mods/Joker-Evolution
 	url = https://github.com/SDM0/Joker-Evolution
-[submodule "Mods/Snow-s-Mods"]
-	path = Mods/Snow-s-Mods
-	url = https://github.com/RattlingSnow353/Snow-s-Mods
 [submodule "Mods/Jestobiology"]
 	path = Mods/Jestobiology
 	url = https://github.com/spikeof2010/Jestobiology
