@@ -94,9 +94,6 @@
 [submodule "Mods/The-Buffoon-Pack"]
 	path = Mods/The-Buffoon-Pack
 	url = https://github.com/lshtech/The-Buffoon-Pack
-[submodule "Mods/DebugPlus"]
-	path = Mods/DebugPlus
-	url = https://github.com/WilsontheWolf/DebugPlus
 [submodule "Mods/FoldButton"]
 	path = Mods/FoldButton
 	url = https://github.com/happinyz/BalatroFoldButton
@@ -157,3 +154,6 @@
 [submodule "Mods/CustomSuitOrder"]
 	path = Mods/CustomSuitOrder
 	url = https://github.com/DigitalDetective47/suit-order
+[submodule "Mods/DebugPlus"]
+	path = Mods/DebugPlus
+	url = https://github.com/Dimserene/DebugPlus
