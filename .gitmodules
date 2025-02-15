@@ -154,3 +154,6 @@
 [submodule "Mods/Order"]
 	path = Mods/Order
 	url = https://github.com/pinkmaggit-hub/Order/
+[submodule "Mods/CustomSuitOrder"]
+	path = Mods/CustomSuitOrder
+	url = https://github.com/DigitalDetective47/suit-order
