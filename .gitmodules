@@ -67,9 +67,6 @@
 [submodule "Mods/Blueprint"]
 	path = Mods/Blueprint
 	url = https://github.com/stupxd/Blueprint
-[submodule "Mods/SpicyJokers"]
-	path = Mods/SpicyJokers
-	url = https://github.com/lshtech/SpicyJokers
 [submodule "Mods/JankJonklers"]
 	path = Mods/JankJonklers
 	url = https://github.com/spikeof2010/JankJonklers
