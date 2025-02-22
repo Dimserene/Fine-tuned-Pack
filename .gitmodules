@@ -154,3 +154,6 @@
 [submodule "Mods/DebugPlus"]
 	path = Mods/DebugPlus
 	url = https://github.com/Dimserene/DebugPlus
+[submodule "Mods/DeckStickerShowEverywhere"]
+	path = Mods/DeckStickerShowEverywhere
+	url = https://github.com/qwerty9118/DeckStickerShowEverywhere
