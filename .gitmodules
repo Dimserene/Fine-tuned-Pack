@@ -136,9 +136,6 @@
 [submodule "Mods/Balatro451"]
 	path = Mods/Balatro451
 	url = https://github.com/SM451Modding/Balatro451/
-[submodule "Mods/Bunco"]
-	path = Mods/Bunco
-	url = https://github.com/Dimserene/Bunco
 [submodule "Mods/FlushHotkeys"]
 	path = Mods/FlushHotkeys
 	url = https://github.com/Dimserene/FlushHotkeys
