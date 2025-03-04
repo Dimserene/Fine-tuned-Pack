@@ -88,9 +88,6 @@
 [submodule "Mods/The-Buffoon-Pack"]
 	path = Mods/The-Buffoon-Pack
 	url = https://github.com/lshtech/The-Buffoon-Pack
-[submodule "Mods/FoldButton"]
-	path = Mods/FoldButton
-	url = https://github.com/happinyz/BalatroFoldButton
 [submodule "Mods/Handy"]
 	path = Mods/Handy
 	url = https://github.com/SleepyG11/HandyBalatro
@@ -154,3 +151,6 @@
 [submodule "Mods/Paperback"]
 	path = Mods/Paperback
 	url = https://github.com/Balatro-Paperback/paperback
+[submodule "Mods/Jimbos_Metrics"]
+	path = Mods/Jimbos_Metrics
+	url = https://gitlab.com/CraftedCart/jimbos_metrics/
